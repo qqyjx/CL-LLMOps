@@ -1,0 +1,3046 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-23T08:04:57",
+    "reviewer_item": "R4.2",
+    "protocol": "source-validation MOPSO update -> frozen replay on all target regression suites",
+    "eval_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "tolerances": {
+      "max_f1_drop": 0.01,
+      "max_hallucination_increase": 0.01,
+      "max_false_escalation_increase": 0.02
+    }
+  },
+  "global_operating_point": {
+    "alpha_p": 0.5,
+    "alpha_d": 0.265562163503954,
+    "delta": 0.0,
+    "lambda_r": 0.1,
+    "M": 7,
+    "beta": 0.01,
+    "beta_requested": 0.007067309408286756
+  },
+  "source_updates": {
+    "pq16": {
+      "params": {
+        "alpha_p": 0.7119718565990473,
+        "alpha_d": 0.1,
+        "delta": 0.2,
+        "lambda_r": 0.1,
+        "M": 3,
+        "beta": 0.1
+      },
+      "source_validation_objectives": {
+        "f1": 0.935077942890443,
+        "hallucination_rate": 0.008928571428571428,
+        "false_escalation_rate": 0.9642857142857143
+      }
+    },
+    "cwru": {
+      "params": {
+        "alpha_p": 0.5,
+        "alpha_d": 0.22548520993785445,
+        "delta": 0.12133167347375827,
+        "lambda_r": 0.7,
+        "M": 9,
+        "beta": 0.001
+      },
+      "source_validation_objectives": {
+        "f1": 0.9833333333333332,
+        "hallucination_rate": 0.008333333333333333,
+        "false_escalation_rate": 0.9416666666666667
+      }
+    },
+    "care": {
+      "params": {
+        "alpha_p": 0.5,
+        "alpha_d": 0.1,
+        "delta": 0.11410551120929593,
+        "lambda_r": 0.2728141661665128,
+        "M": 7,
+        "beta": 0.08145791799640928
+      },
+      "source_validation_objectives": {
+        "f1": 0.3657142857142857,
+        "hallucination_rate": 0.06666666666666667,
+        "false_escalation_rate": 0.8833333333333333
+      }
+    }
+  },
+  "pass_rate_matrix": {
+    "pq16": {
+      "pq16": {
+        "pass_rate": 0.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.13035714285714287,
+          "false_escalation_rate": 0.06071428571428571
+        }
+      },
+      "cwru": {
+        "pass_rate": 1.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.011666666666666665,
+          "false_escalation_rate": -0.006666666666666677
+        }
+      },
+      "care": {
+        "pass_rate": 0.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": -0.008350736662515613,
+          "hallucination_rate": -0.07333333333333333,
+          "false_escalation_rate": 0.1716666666666667
+        }
+      }
+    },
+    "cwru": {
+      "pq16": {
+        "pass_rate": 0.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.05535714285714286,
+          "false_escalation_rate": 0.044642857142857144
+        }
+      },
+      "cwru": {
+        "pass_rate": 1.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.011666666666666665,
+          "false_escalation_rate": -0.05333333333333336
+        }
+      },
+      "care": {
+        "pass_rate": 0.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0024912591073659174,
+          "hallucination_rate": 0.01333333333333333,
+          "false_escalation_rate": 0.055000000000000014
+        }
+      }
+    },
+    "care": {
+      "pq16": {
+        "pass_rate": 0.2,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.08571428571428572,
+          "false_escalation_rate": 0.04285714285714286
+        }
+      },
+      "cwru": {
+        "pass_rate": 1.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0,
+          "hallucination_rate": -0.006666666666666666,
+          "false_escalation_rate": -0.009999999999999998
+        }
+      },
+      "care": {
+        "pass_rate": 0.0,
+        "n_cycles": 5,
+        "mean_deltas": {
+          "f1": 0.0021106898246021633,
+          "hallucination_rate": 0.0016666666666666663,
+          "false_escalation_rate": 0.10333333333333332
+        }
+      }
+    }
+  },
+  "per_cycle": [
+    {
+      "seed": 0,
+      "source_update": "pq16",
+      "target_suite": "pq16",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.13392857142857142,
+        "hypothesis_hallucination_rate": 0.4107142857142857,
+        "contradiction_rate": 0.10714285714285714,
+        "action_accuracy": 0.33035714285714285,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5446428571428571,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.026785714285714284,
+        "hypothesis_hallucination_rate": 0.4017857142857143,
+        "contradiction_rate": 0.026785714285714284,
+        "action_accuracy": 0.4642857142857143,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.9732142857142857,
+        "proceed_rate": 0.026785714285714284,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.10714285714285714,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 0,
+      "source_update": "cwru",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.13392857142857142,
+        "hypothesis_hallucination_rate": 0.4107142857142857,
+        "contradiction_rate": 0.10714285714285714,
+        "action_accuracy": 0.33035714285714285,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5446428571428571,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.09821428571428571,
+        "hypothesis_hallucination_rate": 0.4375,
+        "contradiction_rate": 0.08035714285714286,
+        "action_accuracy": 0.4107142857142857,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.8303571428571429,
+        "proceed_rate": 0.16071428571428573,
+        "defer_rate": 0.008928571428571428,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.03571428571428571,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 0,
+      "source_update": "care",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.13392857142857142,
+        "hypothesis_hallucination_rate": 0.4107142857142857,
+        "contradiction_rate": 0.10714285714285714,
+        "action_accuracy": 0.33035714285714285,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5446428571428571,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9107142857142857,
+        "f1": 0.903736031125737,
+        "hallucination_rate": 0.03571428571428571,
+        "hypothesis_hallucination_rate": 0.4107142857142857,
+        "contradiction_rate": 0.044642857142857144,
+        "action_accuracy": 0.4642857142857143,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.875,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.09821428571428571,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 0,
+      "source_update": "pq16",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.325,
+        "contradiction_rate": 0.041666666666666664,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.925,
+        "proceed_rate": 0.075,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.35833333333333334,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9916666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.041666666666666664,
+        "false_escalation_rate": 0.0
+      },
+      "passed": true
+    },
+    {
+      "seed": 0,
+      "source_update": "cwru",
+      "target_suite": "cwru",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.325,
+        "contradiction_rate": 0.041666666666666664,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.925,
+        "proceed_rate": 0.075,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.3416666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.35833333333333334,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.925,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.075,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.041666666666666664,
+        "false_escalation_rate": -0.033333333333333326
+      },
+      "passed": true
+    },
+    {
+      "seed": 0,
+      "source_update": "care",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.325,
+        "contradiction_rate": 0.041666666666666664,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.925,
+        "proceed_rate": 0.075,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9916666666666667,
+        "f1": 0.9916521739130436,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.325,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9666666666666667,
+        "proceed_rate": 0.03333333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.041666666666666664,
+        "false_escalation_rate": -0.008333333333333304
+      },
+      "passed": true
+    },
+    {
+      "seed": 0,
+      "source_update": "pq16",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.5,
+        "f1": 0.49650349650349646,
+        "hallucination_rate": 0.09166666666666666,
+        "hypothesis_hallucination_rate": 0.475,
+        "contradiction_rate": 0.058333333333333334,
+        "action_accuracy": 0.175,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.25,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.48333333333333334,
+        "f1": 0.4781144781144781,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.4583333333333333,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.008333333333333333,
+        "false_escalation_rate": 0.49166666666666664,
+        "overconfident_error_rate": 0.008333333333333333,
+        "escalation_rate": 0.9833333333333333,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": -0.018389018389018352,
+        "hallucination_rate": -0.08333333333333333,
+        "false_escalation_rate": 0.175
+      },
+      "passed": false
+    },
+    {
+      "seed": 0,
+      "source_update": "cwru",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.5,
+        "f1": 0.49650349650349646,
+        "hallucination_rate": 0.09166666666666666,
+        "hypothesis_hallucination_rate": 0.475,
+        "contradiction_rate": 0.058333333333333334,
+        "action_accuracy": 0.175,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.25,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.5,
+        "f1": 0.49776785714285715,
+        "hallucination_rate": 0.14166666666666666,
+        "hypothesis_hallucination_rate": 0.44166666666666665,
+        "contradiction_rate": 0.10833333333333334,
+        "action_accuracy": 0.125,
+        "false_escalation_rate": 0.3416666666666667,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.675,
+        "proceed_rate": 0.20833333333333334,
+        "defer_rate": 0.11666666666666667,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0012643606393606954,
+        "hallucination_rate": 0.05,
+        "false_escalation_rate": 0.025000000000000022
+      },
+      "passed": false
+    },
+    {
+      "seed": 0,
+      "source_update": "care",
+      "target_suite": "care",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.5,
+        "f1": 0.49650349650349646,
+        "hallucination_rate": 0.09166666666666666,
+        "hypothesis_hallucination_rate": 0.475,
+        "contradiction_rate": 0.058333333333333334,
+        "action_accuracy": 0.175,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.25,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.5,
+        "f1": 0.49650349650349646,
+        "hallucination_rate": 0.09166666666666666,
+        "hypothesis_hallucination_rate": 0.475,
+        "contradiction_rate": 0.058333333333333334,
+        "action_accuracy": 0.05,
+        "false_escalation_rate": 0.44166666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.85,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": 0.125
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "pq16",
+      "target_suite": "pq16",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.16964285714285715,
+        "hypothesis_hallucination_rate": 0.38392857142857145,
+        "contradiction_rate": 0.16071428571428573,
+        "action_accuracy": 0.3125,
+        "false_escalation_rate": 0.11607142857142858,
+        "overconfident_error_rate": 0.017857142857142856,
+        "escalation_rate": 0.5178571428571429,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.03571428571428571,
+        "hypothesis_hallucination_rate": 0.4017857142857143,
+        "contradiction_rate": 0.03571428571428571,
+        "action_accuracy": 0.49107142857142855,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.9285714285714286,
+        "proceed_rate": 0.07142857142857142,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.13392857142857145,
+        "false_escalation_rate": 0.07142857142857142
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "cwru",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.16964285714285715,
+        "hypothesis_hallucination_rate": 0.38392857142857145,
+        "contradiction_rate": 0.16071428571428573,
+        "action_accuracy": 0.3125,
+        "false_escalation_rate": 0.11607142857142858,
+        "overconfident_error_rate": 0.017857142857142856,
+        "escalation_rate": 0.5178571428571429,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.10714285714285714,
+        "hypothesis_hallucination_rate": 0.4375,
+        "contradiction_rate": 0.10714285714285714,
+        "action_accuracy": 0.45535714285714285,
+        "false_escalation_rate": 0.17857142857142858,
+        "overconfident_error_rate": 0.017857142857142856,
+        "escalation_rate": 0.7589285714285714,
+        "proceed_rate": 0.20535714285714285,
+        "defer_rate": 0.03571428571428571,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.06250000000000001,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "care",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.16964285714285715,
+        "hypothesis_hallucination_rate": 0.38392857142857145,
+        "contradiction_rate": 0.16071428571428573,
+        "action_accuracy": 0.3125,
+        "false_escalation_rate": 0.11607142857142858,
+        "overconfident_error_rate": 0.017857142857142856,
+        "escalation_rate": 0.5178571428571429,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.08035714285714286,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9285714285714286,
+        "f1": 0.9274210164835165,
+        "hallucination_rate": 0.08035714285714286,
+        "hypothesis_hallucination_rate": 0.38392857142857145,
+        "contradiction_rate": 0.09821428571428571,
+        "action_accuracy": 0.4642857142857143,
+        "false_escalation_rate": 0.17857142857142858,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.8214285714285714,
+        "proceed_rate": 0.17857142857142858,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.08928571428571429,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "pq16",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.3,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3416666666666667,
+        "false_escalation_rate": 0.35833333333333334,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.041666666666666664,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": -0.041666666666666685
+      },
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "source_update": "cwru",
+      "target_suite": "cwru",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.25833333333333336,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.875,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.11666666666666667,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": -0.08333333333333337
+      },
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "source_update": "care",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.325,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9666666666666667,
+        "proceed_rate": 0.03333333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.008333333333333333,
+        "false_escalation_rate": -0.025000000000000022
+      },
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "source_update": "pq16",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.41587301587301584,
+        "hallucination_rate": 0.1,
+        "hypothesis_hallucination_rate": 0.38333333333333336,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.08333333333333333,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.16666666666666666,
+        "defer_rate": 0.16666666666666666,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.4,
+        "f1": 0.3828571428571429,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.39166666666666666,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.0,
+        "false_escalation_rate": 0.5,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 1.0,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": -0.03301587301587294,
+        "hallucination_rate": -0.1,
+        "false_escalation_rate": 0.18333333333333335
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "cwru",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.41587301587301584,
+        "hallucination_rate": 0.1,
+        "hypothesis_hallucination_rate": 0.38333333333333336,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.08333333333333333,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.16666666666666666,
+        "defer_rate": 0.16666666666666666,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.4166666666666667,
+        "f1": 0.4061085972850679,
+        "hallucination_rate": 0.08333333333333333,
+        "hypothesis_hallucination_rate": 0.425,
+        "contradiction_rate": 0.075,
+        "action_accuracy": 0.041666666666666664,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.7916666666666666,
+        "proceed_rate": 0.13333333333333333,
+        "defer_rate": 0.075,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": -0.009764418587947965,
+        "hallucination_rate": -0.016666666666666677,
+        "false_escalation_rate": 0.05833333333333335
+      },
+      "passed": false
+    },
+    {
+      "seed": 1,
+      "source_update": "care",
+      "target_suite": "care",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.41587301587301584,
+        "hallucination_rate": 0.1,
+        "hypothesis_hallucination_rate": 0.38333333333333336,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.08333333333333333,
+        "false_escalation_rate": 0.31666666666666665,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.16666666666666666,
+        "defer_rate": 0.16666666666666666,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.425,
+        "f1": 0.41587301587301584,
+        "hallucination_rate": 0.1,
+        "hypothesis_hallucination_rate": 0.38333333333333336,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.008333333333333333,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8333333333333334,
+        "proceed_rate": 0.16666666666666666,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": 0.07500000000000001
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "pq16",
+      "target_suite": "pq16",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.15178571428571427,
+        "hypothesis_hallucination_rate": 0.48214285714285715,
+        "contradiction_rate": 0.16964285714285715,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5535714285714286,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.044642857142857144,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.008928571428571428,
+        "hypothesis_hallucination_rate": 0.49107142857142855,
+        "contradiction_rate": 0.017857142857142856,
+        "action_accuracy": 0.4732142857142857,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.017857142857142856,
+        "escalation_rate": 0.9464285714285714,
+        "proceed_rate": 0.05357142857142857,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.14285714285714285,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "cwru",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.15178571428571427,
+        "hypothesis_hallucination_rate": 0.48214285714285715,
+        "contradiction_rate": 0.16964285714285715,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5535714285714286,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.044642857142857144,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.09821428571428571,
+        "hypothesis_hallucination_rate": 0.5178571428571429,
+        "contradiction_rate": 0.10714285714285714,
+        "action_accuracy": 0.4107142857142857,
+        "false_escalation_rate": 0.16964285714285715,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.7589285714285714,
+        "proceed_rate": 0.19642857142857142,
+        "defer_rate": 0.044642857142857144,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.05357142857142856,
+        "false_escalation_rate": 0.04464285714285715
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "care",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.15178571428571427,
+        "hypothesis_hallucination_rate": 0.48214285714285715,
+        "contradiction_rate": 0.16964285714285715,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5535714285714286,
+        "proceed_rate": 0.4017857142857143,
+        "defer_rate": 0.044642857142857144,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9459649725274726,
+        "hallucination_rate": 0.07142857142857142,
+        "hypothesis_hallucination_rate": 0.48214285714285715,
+        "contradiction_rate": 0.07142857142857142,
+        "action_accuracy": 0.44642857142857145,
+        "false_escalation_rate": 0.16964285714285715,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.8303571428571429,
+        "proceed_rate": 0.16964285714285715,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.08035714285714285,
+        "false_escalation_rate": 0.04464285714285715
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "pq16",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.20833333333333334,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9416666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.05,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.21666666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 1.0,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.008333333333333333,
+        "false_escalation_rate": 0.016666666666666663
+      },
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "source_update": "cwru",
+      "target_suite": "cwru",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.20833333333333334,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9416666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.05,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.35833333333333334,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.09166666666666666,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.008333333333333333,
+        "false_escalation_rate": -0.025000000000000022
+      },
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "source_update": "care",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.20833333333333334,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9416666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.05,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.016666666666666666,
+        "hypothesis_hallucination_rate": 0.20833333333333334,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.95,
+        "proceed_rate": 0.05,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.008333333333333333,
+        "false_escalation_rate": 0.0
+      },
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "source_update": "pq16",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.35833333333333334,
+        "f1": 0.34183346392193176,
+        "hallucination_rate": 0.06666666666666667,
+        "hypothesis_hallucination_rate": 0.39166666666666666,
+        "contradiction_rate": 0.05,
+        "action_accuracy": 0.2,
+        "false_escalation_rate": 0.2833333333333333,
+        "overconfident_error_rate": 0.008333333333333333,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.225,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.35,
+        "f1": 0.3314285714285714,
+        "hallucination_rate": 0.016666666666666666,
+        "hypothesis_hallucination_rate": 0.375,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.0,
+        "false_escalation_rate": 0.48333333333333334,
+        "overconfident_error_rate": 0.016666666666666666,
+        "escalation_rate": 0.9833333333333333,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": -0.010404892493360351,
+        "hallucination_rate": -0.05,
+        "false_escalation_rate": 0.2
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "cwru",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.35833333333333334,
+        "f1": 0.34183346392193176,
+        "hallucination_rate": 0.06666666666666667,
+        "hypothesis_hallucination_rate": 0.39166666666666666,
+        "contradiction_rate": 0.05,
+        "action_accuracy": 0.2,
+        "false_escalation_rate": 0.2833333333333333,
+        "overconfident_error_rate": 0.008333333333333333,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.225,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.35833333333333334,
+        "f1": 0.34183346392193176,
+        "hallucination_rate": 0.08333333333333333,
+        "hypothesis_hallucination_rate": 0.4,
+        "contradiction_rate": 0.075,
+        "action_accuracy": 0.09166666666666666,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8083333333333333,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.06666666666666667,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.016666666666666663,
+        "false_escalation_rate": 0.09166666666666667
+      },
+      "passed": false
+    },
+    {
+      "seed": 2,
+      "source_update": "care",
+      "target_suite": "care",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.35833333333333334,
+        "f1": 0.34183346392193176,
+        "hallucination_rate": 0.06666666666666667,
+        "hypothesis_hallucination_rate": 0.39166666666666666,
+        "contradiction_rate": 0.05,
+        "action_accuracy": 0.2,
+        "false_escalation_rate": 0.2833333333333333,
+        "overconfident_error_rate": 0.008333333333333333,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.225,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.35833333333333334,
+        "f1": 0.34183346392193176,
+        "hallucination_rate": 0.06666666666666667,
+        "hypothesis_hallucination_rate": 0.39166666666666666,
+        "contradiction_rate": 0.05,
+        "action_accuracy": 0.05,
+        "false_escalation_rate": 0.43333333333333335,
+        "overconfident_error_rate": 0.008333333333333333,
+        "escalation_rate": 0.875,
+        "proceed_rate": 0.125,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": 0.15000000000000002
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "pq16",
+      "target_suite": "pq16",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.1875,
+        "hypothesis_hallucination_rate": 0.4732142857142857,
+        "contradiction_rate": 0.15178571428571427,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5714285714285714,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.05357142857142857,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.008928571428571428,
+        "hypothesis_hallucination_rate": 0.4375,
+        "contradiction_rate": 0.008928571428571428,
+        "action_accuracy": 0.45535714285714285,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9821428571428571,
+        "proceed_rate": 0.017857142857142856,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.17857142857142858,
+        "false_escalation_rate": 0.0625
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "cwru",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.1875,
+        "hypothesis_hallucination_rate": 0.4732142857142857,
+        "contradiction_rate": 0.15178571428571427,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5714285714285714,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.05357142857142857,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.11607142857142858,
+        "hypothesis_hallucination_rate": 0.44642857142857145,
+        "contradiction_rate": 0.09821428571428571,
+        "action_accuracy": 0.4375,
+        "false_escalation_rate": 0.15178571428571427,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.7767857142857143,
+        "proceed_rate": 0.20535714285714285,
+        "defer_rate": 0.017857142857142856,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.07142857142857142,
+        "false_escalation_rate": 0.026785714285714274
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "care",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.1875,
+        "hypothesis_hallucination_rate": 0.4732142857142857,
+        "contradiction_rate": 0.15178571428571427,
+        "action_accuracy": 0.3482142857142857,
+        "false_escalation_rate": 0.125,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.5714285714285714,
+        "proceed_rate": 0.375,
+        "defer_rate": 0.05357142857142857,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9464285714285714,
+        "f1": 0.9446189227439228,
+        "hallucination_rate": 0.09821428571428571,
+        "hypothesis_hallucination_rate": 0.4732142857142857,
+        "contradiction_rate": 0.07142857142857142,
+        "action_accuracy": 0.4732142857142857,
+        "false_escalation_rate": 0.15178571428571427,
+        "overconfident_error_rate": 0.008928571428571428,
+        "escalation_rate": 0.8214285714285714,
+        "proceed_rate": 0.17857142857142858,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.08928571428571429,
+        "false_escalation_rate": 0.026785714285714274
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "pq16",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.225,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.95,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.03333333333333333,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.2833333333333333,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.30833333333333335,
+        "false_escalation_rate": 0.39166666666666666,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9916666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": -0.00833333333333336
+      },
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "source_update": "cwru",
+      "target_suite": "cwru",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.225,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.95,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.03333333333333333,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.23333333333333334,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.3416666666666667,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8916666666666667,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.10833333333333334,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": -0.05833333333333335
+      },
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "source_update": "care",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.225,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.95,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.03333333333333333,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.225,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.31666666666666665,
+        "false_escalation_rate": 0.38333333333333336,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.975,
+        "proceed_rate": 0.025,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": -0.016666666666666663
+      },
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "source_update": "pq16",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.49166666666666664,
+        "f1": 0.4835978835978836,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.4083333333333333,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.11666666666666667,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.09166666666666666,
+        "defer_rate": 0.25833333333333336,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.5,
+        "f1": 0.49310053506054635,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.425,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.0,
+        "false_escalation_rate": 0.5,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9916666666666667,
+        "proceed_rate": 0.008333333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.00950265146266277,
+        "hallucination_rate": -0.03333333333333333,
+        "false_escalation_rate": 0.125
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "cwru",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.49166666666666664,
+        "f1": 0.4835978835978836,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.4083333333333333,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.11666666666666667,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.09166666666666666,
+        "defer_rate": 0.25833333333333336,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.49166666666666664,
+        "f1": 0.4835978835978836,
+        "hallucination_rate": 0.06666666666666667,
+        "hypothesis_hallucination_rate": 0.475,
+        "contradiction_rate": 0.041666666666666664,
+        "action_accuracy": 0.10833333333333334,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.7833333333333333,
+        "proceed_rate": 0.10833333333333334,
+        "defer_rate": 0.10833333333333334,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.025,
+        "false_escalation_rate": 0.025000000000000022
+      },
+      "passed": false
+    },
+    {
+      "seed": 3,
+      "source_update": "care",
+      "target_suite": "care",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.49166666666666664,
+        "f1": 0.4835978835978836,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.4083333333333333,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.11666666666666667,
+        "false_escalation_rate": 0.375,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.65,
+        "proceed_rate": 0.09166666666666666,
+        "defer_rate": 0.25833333333333336,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.49166666666666664,
+        "f1": 0.4835978835978836,
+        "hallucination_rate": 0.041666666666666664,
+        "hypothesis_hallucination_rate": 0.4083333333333333,
+        "contradiction_rate": 0.016666666666666666,
+        "action_accuracy": 0.03333333333333333,
+        "false_escalation_rate": 0.4583333333333333,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9083333333333333,
+        "proceed_rate": 0.09166666666666666,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": 0.0,
+        "false_escalation_rate": 0.08333333333333331
+      },
+      "passed": false
+    },
+    {
+      "seed": 4,
+      "source_update": "pq16",
+      "target_suite": "pq16",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.11607142857142858,
+        "hypothesis_hallucination_rate": 0.33035714285714285,
+        "contradiction_rate": 0.14285714285714285,
+        "action_accuracy": 0.375,
+        "false_escalation_rate": 0.14285714285714285,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.5625,
+        "proceed_rate": 0.3482142857142857,
+        "defer_rate": 0.08928571428571429,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.026785714285714284,
+        "hypothesis_hallucination_rate": 0.39285714285714285,
+        "contradiction_rate": 0.026785714285714284,
+        "action_accuracy": 0.4732142857142857,
+        "false_escalation_rate": 0.1875,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9464285714285714,
+        "proceed_rate": 0.05357142857142857,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.08928571428571429,
+        "false_escalation_rate": 0.04464285714285715
+      },
+      "passed": false
+    },
+    {
+      "seed": 4,
+      "source_update": "cwru",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.11607142857142858,
+        "hypothesis_hallucination_rate": 0.33035714285714285,
+        "contradiction_rate": 0.14285714285714285,
+        "action_accuracy": 0.375,
+        "false_escalation_rate": 0.14285714285714285,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.5625,
+        "proceed_rate": 0.3482142857142857,
+        "defer_rate": 0.08928571428571429,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.0625,
+        "hypothesis_hallucination_rate": 0.3482142857142857,
+        "contradiction_rate": 0.09821428571428571,
+        "action_accuracy": 0.44642857142857145,
+        "false_escalation_rate": 0.16964285714285715,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.7857142857142857,
+        "proceed_rate": 0.16964285714285715,
+        "defer_rate": 0.044642857142857144,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.053571428571428575,
+        "false_escalation_rate": 0.0267857142857143
+      },
+      "passed": false
+    },
+    {
+      "seed": 4,
+      "source_update": "care",
+      "target_suite": "pq16",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.11607142857142858,
+        "hypothesis_hallucination_rate": 0.33035714285714285,
+        "contradiction_rate": 0.14285714285714285,
+        "action_accuracy": 0.375,
+        "false_escalation_rate": 0.14285714285714285,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.5625,
+        "proceed_rate": 0.3482142857142857,
+        "defer_rate": 0.08928571428571429,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.9375,
+        "f1": 0.9367845695970696,
+        "hallucination_rate": 0.044642857142857144,
+        "hypothesis_hallucination_rate": 0.33035714285714285,
+        "contradiction_rate": 0.08928571428571429,
+        "action_accuracy": 0.5089285714285714,
+        "false_escalation_rate": 0.16071428571428573,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8571428571428571,
+        "proceed_rate": 0.14285714285714285,
+        "defer_rate": 0.0,
+        "n_episodes": 112,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_pq16_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.07142857142857142,
+        "false_escalation_rate": 0.017857142857142877
+      },
+      "passed": true
+    },
+    {
+      "seed": 4,
+      "source_update": "pq16",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.25,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 1.0,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.008333333333333333,
+        "false_escalation_rate": 0.0
+      },
+      "passed": true
+    },
+    {
+      "seed": 4,
+      "source_update": "cwru",
+      "target_suite": "cwru",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.275,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.3333333333333333,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.875,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.10833333333333334,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.008333333333333333,
+        "false_escalation_rate": -0.06666666666666671
+      },
+      "passed": true
+    },
+    {
+      "seed": 4,
+      "source_update": "care",
+      "target_suite": "cwru",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.008333333333333333,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9583333333333334,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.025,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "hallucination_rate": 0.0,
+        "hypothesis_hallucination_rate": 0.24166666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.3,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 1.0,
+        "proceed_rate": 0.0,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_cwru_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.0,
+        "hallucination_rate": -0.008333333333333333,
+        "false_escalation_rate": 0.0
+      },
+      "passed": true
+    },
+    {
+      "seed": 4,
+      "source_update": "pq16",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.40307115564847523,
+        "hallucination_rate": 0.10833333333333334,
+        "hypothesis_hallucination_rate": 0.5,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.13333333333333333,
+        "false_escalation_rate": 0.325,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.18333333333333332,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.43333333333333335,
+        "f1": 0.41362460477148605,
+        "hallucination_rate": 0.008333333333333333,
+        "hypothesis_hallucination_rate": 0.3416666666666667,
+        "contradiction_rate": 0.0,
+        "action_accuracy": 0.008333333333333333,
+        "false_escalation_rate": 0.5,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.9833333333333333,
+        "proceed_rate": 0.016666666666666666,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.010553449123010816,
+        "hallucination_rate": -0.1,
+        "false_escalation_rate": 0.175
+      },
+      "passed": false
+    },
+    {
+      "seed": 4,
+      "source_update": "cwru",
+      "target_suite": "care",
+      "in_domain": false,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.40307115564847523,
+        "hallucination_rate": 0.10833333333333334,
+        "hypothesis_hallucination_rate": 0.5,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.13333333333333333,
+        "false_escalation_rate": 0.325,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.18333333333333332,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.44166666666666665,
+        "f1": 0.4240275091338921,
+        "hallucination_rate": 0.1,
+        "hypothesis_hallucination_rate": 0.5,
+        "contradiction_rate": 0.08333333333333333,
+        "action_accuracy": 0.09166666666666666,
+        "false_escalation_rate": 0.4,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8166666666666667,
+        "proceed_rate": 0.14166666666666666,
+        "defer_rate": 0.041666666666666664,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001,
+          "beta_resolution": {
+            "selected_beta": 0.001,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.001.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.020956353485416856,
+        "hallucination_rate": -0.008333333333333331,
+        "false_escalation_rate": 0.07500000000000001
+      },
+      "passed": false
+    },
+    {
+      "seed": 4,
+      "source_update": "care",
+      "target_suite": "care",
+      "in_domain": true,
+      "baseline": {
+        "accuracy": 0.425,
+        "f1": 0.40307115564847523,
+        "hallucination_rate": 0.10833333333333334,
+        "hypothesis_hallucination_rate": 0.5,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.13333333333333333,
+        "false_escalation_rate": 0.325,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.6666666666666666,
+        "proceed_rate": 0.15,
+        "defer_rate": 0.18333333333333332,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.265562163503954,
+          "delta": 0.0,
+          "lambda_r": 0.1,
+          "M": 7,
+          "beta": 0.01,
+          "beta_resolution": {
+            "selected_beta": 0.01,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.01.pt"
+          }
+        }
+      },
+      "updated": {
+        "accuracy": 0.43333333333333335,
+        "f1": 0.41362460477148605,
+        "hallucination_rate": 0.11666666666666667,
+        "hypothesis_hallucination_rate": 0.5,
+        "contradiction_rate": 0.09166666666666666,
+        "action_accuracy": 0.05,
+        "false_escalation_rate": 0.4083333333333333,
+        "overconfident_error_rate": 0.0,
+        "escalation_rate": 0.8416666666666667,
+        "proceed_rate": 0.15833333333333333,
+        "defer_rate": 0.0,
+        "n_episodes": 120,
+        "params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928,
+          "beta_resolution": {
+            "selected_beta": 0.1,
+            "checkpoint": "experiments/checkpoints/caevn_care_beta0.1.pt"
+          }
+        }
+      },
+      "deltas": {
+        "f1": 0.010553449123010816,
+        "hallucination_rate": 0.008333333333333331,
+        "false_escalation_rate": 0.08333333333333331
+      },
+      "passed": false
+    }
+  ]
+}

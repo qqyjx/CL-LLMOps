@@ -1,0 +1,4 @@
+# Additions used only by the Reviewer-4.4 FD-LLM LoRA reimplementation.
+# Keep the existing torch/transformers versions from the cl-llmops env.
+peft>=0.19,<0.20
+accelerate>=1.14,<2

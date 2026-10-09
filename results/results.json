@@ -1,0 +1,3320 @@
+{
+  "metadata": {
+    "paper": "Fuzzy-Gated Verification of LLM Agents for Industrial Fault Diagnosis: An Evolutionary-Optimized Closed-Loop Framework",
+    "framework": "CL-LLMOps",
+    "campaign": "R1 remeasure campaign v3 (chat-template + parser fixes), completed 2026-07-23",
+    "note": "Mirror of every number reported in the paper. Every value traces to a results/*.json artifact named in the per-section provenance field. Aggregation for main_paired_comparison: per-split decode-seed means, then mean/std over the 10 bootstrap splits (matches paper Table tab:main).",
+    "backbone": "meta-llama/Llama-3.1-8B-Instruct (alt: mistralai/Mistral-7B-Instruct-v0.3)",
+    "last_updated": "2026-07-23",
+    "datasets": {
+      "pq16": "PQ Classification (240,000 samples, 16 classes)",
+      "cwru": "CWRU Bearing (5,886 windows, 10 classes)",
+      "care": "CARE Wind SCADA (267,569 windows, 2 classes, 52 tags, dataset-level split)"
+    }
+  },
+  "main_paired_comparison": {
+    "provenance": "results/statistical_protocol.json raw_metrics (10 splits x 3 decode seeds, 160 episodes/split)",
+    "paper_table": "tab:main",
+    "values": {
+      "pq16": {
+        "agent_nov": {
+          "accuracy": {
+            "mean": 0.9304,
+            "std": 0.0105
+          },
+          "f1": {
+            "mean": 0.9293,
+            "std": 0.0106
+          },
+          "hallucination_rate": {
+            "mean": 0.4367,
+            "std": 0.0237
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.4367,
+            "std": 0.0237
+          },
+          "contradiction_rate": {
+            "mean": 0.3533,
+            "std": 0.0215
+          },
+          "action_accuracy": {
+            "mean": 0.3162,
+            "std": 0.0099
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "overconfident_error_rate": {
+            "mean": 0.0696,
+            "std": 0.0105
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 8321.2487,
+            "std": 568.6062
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        },
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9304,
+            "std": 0.0105
+          },
+          "f1": {
+            "mean": 0.9293,
+            "std": 0.0106
+          },
+          "hallucination_rate": {
+            "mean": 0.1771,
+            "std": 0.0188
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.4367,
+            "std": 0.0237
+          },
+          "contradiction_rate": {
+            "mean": 0.161,
+            "std": 0.0163
+          },
+          "action_accuracy": {
+            "mean": 0.3035,
+            "std": 0.0112
+          },
+          "false_escalation_rate": {
+            "mean": 0.1269,
+            "std": 0.0027
+          },
+          "overconfident_error_rate": {
+            "mean": 0.0119,
+            "std": 0.0038
+          },
+          "escalation_rate": {
+            "mean": 0.5287,
+            "std": 0.0159
+          },
+          "proceed_rate": {
+            "mean": 0.4175,
+            "std": 0.0182
+          },
+          "defer_rate": {
+            "mean": 0.0537,
+            "std": 0.0053
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 8321.2487,
+            "std": 568.6062
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        }
+      },
+      "cwru": {
+        "agent_nov": {
+          "accuracy": {
+            "mean": 0.9829,
+            "std": 0.0066
+          },
+          "f1": {
+            "mean": 0.9829,
+            "std": 0.0066
+          },
+          "hallucination_rate": {
+            "mean": 0.2454,
+            "std": 0.0112
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.2454,
+            "std": 0.0112
+          },
+          "contradiction_rate": {
+            "mean": 0.1917,
+            "std": 0.0064
+          },
+          "action_accuracy": {
+            "mean": 0.4102,
+            "std": 0.0076
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "overconfident_error_rate": {
+            "mean": 0.0171,
+            "std": 0.0066
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 6741.3132,
+            "std": 187.2626
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        },
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9835,
+            "std": 0.0064
+          },
+          "f1": {
+            "mean": 0.9835,
+            "std": 0.0064
+          },
+          "hallucination_rate": {
+            "mean": 0.0148,
+            "std": 0.0054
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.2454,
+            "std": 0.0112
+          },
+          "contradiction_rate": {
+            "mean": 0.0125,
+            "std": 0.0055
+          },
+          "action_accuracy": {
+            "mean": 0.3165,
+            "std": 0.0043
+          },
+          "false_escalation_rate": {
+            "mean": 0.3892,
+            "std": 0.0029
+          },
+          "overconfident_error_rate": {
+            "mean": 0.0002,
+            "std": 0.0007
+          },
+          "escalation_rate": {
+            "mean": 0.9313,
+            "std": 0.0092
+          },
+          "proceed_rate": {
+            "mean": 0.0365,
+            "std": 0.0074
+          },
+          "defer_rate": {
+            "mean": 0.0323,
+            "std": 0.0065
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 6741.3132,
+            "std": 187.2626
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        }
+      },
+      "care": {
+        "agent_nov": {
+          "accuracy": {
+            "mean": 0.5702,
+            "std": 0.0176
+          },
+          "f1": {
+            "mean": 0.5694,
+            "std": 0.0174
+          },
+          "hallucination_rate": {
+            "mean": 0.5085,
+            "std": 0.0196
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.5085,
+            "std": 0.0196
+          },
+          "contradiction_rate": {
+            "mean": 0.3504,
+            "std": 0.0195
+          },
+          "action_accuracy": {
+            "mean": 0.4083,
+            "std": 0.019
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "overconfident_error_rate": {
+            "mean": 0.4298,
+            "std": 0.0176
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 7853.2654,
+            "std": 537.7904
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        },
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.5748,
+            "std": 0.0187
+          },
+          "f1": {
+            "mean": 0.5739,
+            "std": 0.0185
+          },
+          "hallucination_rate": {
+            "mean": 0.0996,
+            "std": 0.0146
+          },
+          "hypothesis_hallucination_rate": {
+            "mean": 0.5085,
+            "std": 0.0196
+          },
+          "contradiction_rate": {
+            "mean": 0.0621,
+            "std": 0.0119
+          },
+          "action_accuracy": {
+            "mean": 0.1512,
+            "std": 0.0145
+          },
+          "false_escalation_rate": {
+            "mean": 0.3173,
+            "std": 0.0121
+          },
+          "overconfident_error_rate": {
+            "mean": 0.0023,
+            "std": 0.0015
+          },
+          "escalation_rate": {
+            "mean": 0.5731,
+            "std": 0.0214
+          },
+          "proceed_rate": {
+            "mean": 0.1546,
+            "std": 0.0148
+          },
+          "defer_rate": {
+            "mean": 0.2723,
+            "std": 0.0156
+          },
+          "n_episodes": {
+            "mean": 160,
+            "std": 0.0
+          },
+          "avg_time_ms": {
+            "mean": 7853.2654,
+            "std": 537.7904
+          },
+          "paired_shared_generations": {
+            "mean": 1,
+            "std": 0.0
+          }
+        }
+      }
+    }
+  },
+  "paired_significance": {
+    "provenance": "results/statistical_protocol.json comparisons (Wilcoxon signed-rank N=10, Holm over 15 comparisons, bootstrap CIs)",
+    "paper_table": "tab:significance",
+    "values": {
+      "pq16": {
+        "agent_nov": {
+          "accuracy": {
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_raw": 1.0,
+            "p_holm": 1.0
+          },
+          "f1": {
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_raw": 1.0,
+            "p_holm": 1.0
+          },
+          "hallucination_rate": {
+            "mean_diff": -0.2596,
+            "ci95": [
+              -0.2658,
+              -0.2529
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          },
+          "action_accuracy": {
+            "mean_diff": -0.0127,
+            "ci95": [
+              -0.0227,
+              -0.0025
+            ],
+            "p_raw": 0.06445,
+            "p_holm": 0.45117
+          },
+          "false_escalation_rate": {
+            "mean_diff": 0.1269,
+            "ci95": [
+              0.1254,
+              0.1285
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          }
+        }
+      },
+      "cwru": {
+        "agent_nov": {
+          "accuracy": {
+            "mean_diff": 0.0006,
+            "ci95": [
+              0.0,
+              0.0017
+            ],
+            "p_raw": 0.5,
+            "p_holm": 1.0
+          },
+          "f1": {
+            "mean_diff": 0.0006,
+            "ci95": [
+              0.0,
+              0.0017
+            ],
+            "p_raw": 0.125,
+            "p_holm": 0.5
+          },
+          "hallucination_rate": {
+            "mean_diff": -0.2306,
+            "ci95": [
+              -0.2358,
+              -0.2252
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          },
+          "action_accuracy": {
+            "mean_diff": -0.0938,
+            "ci95": [
+              -0.0983,
+              -0.089
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          },
+          "false_escalation_rate": {
+            "mean_diff": 0.3892,
+            "ci95": [
+              0.3875,
+              0.3908
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          }
+        }
+      },
+      "care": {
+        "agent_nov": {
+          "accuracy": {
+            "mean_diff": 0.0046,
+            "ci95": [
+              0.0004,
+              0.0088
+            ],
+            "p_raw": 0.08008,
+            "p_holm": 0.45117
+          },
+          "f1": {
+            "mean_diff": 0.0045,
+            "ci95": [
+              0.0005,
+              0.0089
+            ],
+            "p_raw": 0.06445,
+            "p_holm": 0.45117
+          },
+          "hallucination_rate": {
+            "mean_diff": -0.409,
+            "ci95": [
+              -0.4148,
+              -0.4015
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          },
+          "action_accuracy": {
+            "mean_diff": -0.2571,
+            "ci95": [
+              -0.269,
+              -0.2446
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          },
+          "false_escalation_rate": {
+            "mean_diff": 0.3173,
+            "ci95": [
+              0.3102,
+              0.3242
+            ],
+            "p_raw": 0.00195,
+            "p_holm": 0.0293
+          }
+        }
+      }
+    }
+  },
+  "ablation": {
+    "provenance": "results/ablation_results.json results.*.summary (3 decode seeds)",
+    "paper_table": "tab:ablation",
+    "values": {
+      "pq16": {
+        "full": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1646,
+            "std": 0.0118
+          },
+          "false_escalation_rate": {
+            "mean": 0.1271,
+            "std": 0.0078
+          },
+          "proceed_rate": {
+            "mean": 0.4062,
+            "std": 0.0184
+          },
+          "defer_rate": {
+            "mean": 0.0375,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.5563,
+            "std": 0.0319
+          },
+          "action_accuracy": {
+            "mean": 0.3187,
+            "std": 0.0222
+          }
+        },
+        "no_verifier": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.4042,
+            "std": 0.0128
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.3271,
+            "std": 0.0179
+          }
+        },
+        "no_gating": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.2833,
+            "std": 0.0078
+          },
+          "false_escalation_rate": {
+            "mean": 0.0938,
+            "std": 0.0135
+          },
+          "proceed_rate": {
+            "mean": 0.6146,
+            "std": 0.0252
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.3854,
+            "std": 0.0252
+          },
+          "action_accuracy": {
+            "mean": 0.3021,
+            "std": 0.0078
+          }
+        },
+        "no_self_consistency": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1688,
+            "std": 0.0319
+          },
+          "false_escalation_rate": {
+            "mean": 0.125,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.3937,
+            "std": 0.0135
+          },
+          "defer_rate": {
+            "mean": 0.0625,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.5438,
+            "std": 0.0135
+          },
+          "action_accuracy": {
+            "mean": 0.3104,
+            "std": 0.0118
+          }
+        },
+        "no_regression": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1625,
+            "std": 0.0153
+          },
+          "false_escalation_rate": {
+            "mean": 0.125,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.4479,
+            "std": 0.0118
+          },
+          "defer_rate": {
+            "mean": 0.0563,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.4958,
+            "std": 0.023
+          },
+          "action_accuracy": {
+            "mean": 0.2938,
+            "std": 0.0204
+          }
+        },
+        "rule_only_verifier": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.3,
+            "std": 0.0135
+          },
+          "false_escalation_rate": {
+            "mean": 0.0354,
+            "std": 0.0059
+          },
+          "proceed_rate": {
+            "mean": 0.6625,
+            "std": 0.0051
+          },
+          "defer_rate": {
+            "mean": 0.2062,
+            "std": 0.0051
+          },
+          "escalation_rate": {
+            "mean": 0.1313,
+            "std": 0.0051
+          },
+          "action_accuracy": {
+            "mean": 0.3125,
+            "std": 0.0088
+          }
+        },
+        "model_only_verifier": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1771,
+            "std": 0.0128
+          },
+          "false_escalation_rate": {
+            "mean": 0.1229,
+            "std": 0.0029
+          },
+          "proceed_rate": {
+            "mean": 0.4333,
+            "std": 0.0128
+          },
+          "defer_rate": {
+            "mean": 0.0479,
+            "std": 0.0106
+          },
+          "escalation_rate": {
+            "mean": 0.5188,
+            "std": 0.0234
+          },
+          "action_accuracy": {
+            "mean": 0.3104,
+            "std": 0.0252
+          }
+        },
+        "mlp_verifier": {
+          "accuracy": {
+            "mean": 0.9313,
+            "std": 0.0153
+          },
+          "f1": {
+            "mean": 0.9284,
+            "std": 0.0161
+          },
+          "hallucination_rate": {
+            "mean": 0.1896,
+            "std": 0.0206
+          },
+          "false_escalation_rate": {
+            "mean": 0.1562,
+            "std": 0.0177
+          },
+          "proceed_rate": {
+            "mean": 0.4771,
+            "std": 0.0029
+          },
+          "defer_rate": {
+            "mean": 0.025,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.4979,
+            "std": 0.0164
+          },
+          "action_accuracy": {
+            "mean": 0.3542,
+            "std": 0.0257
+          }
+        },
+        "hard_gating": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.2146,
+            "std": 0.0029
+          },
+          "false_escalation_rate": {
+            "mean": 0.1229,
+            "std": 0.0029
+          },
+          "proceed_rate": {
+            "mean": 0.4917,
+            "std": 0.0252
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.5083,
+            "std": 0.0252
+          },
+          "action_accuracy": {
+            "mean": 0.3188,
+            "std": 0.0177
+          }
+        },
+        "grid_search": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.0479,
+            "std": 0.0029
+          },
+          "false_escalation_rate": {
+            "mean": 0.1812,
+            "std": 0.0051
+          },
+          "proceed_rate": {
+            "mean": 0.1396,
+            "std": 0.0106
+          },
+          "defer_rate": {
+            "mean": 0.0771,
+            "std": 0.0396
+          },
+          "escalation_rate": {
+            "mean": 0.7833,
+            "std": 0.0457
+          },
+          "action_accuracy": {
+            "mean": 0.3875,
+            "std": 0.0234
+          }
+        }
+      },
+      "cwru": {
+        "full": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0167,
+            "std": 0.0156
+          },
+          "false_escalation_rate": {
+            "mean": 0.3937,
+            "std": 0.0051
+          },
+          "proceed_rate": {
+            "mean": 0.0375,
+            "std": 0.0153
+          },
+          "defer_rate": {
+            "mean": 0.0167,
+            "std": 0.0029
+          },
+          "escalation_rate": {
+            "mean": 0.9458,
+            "std": 0.0128
+          },
+          "action_accuracy": {
+            "mean": 0.3188,
+            "std": 0.0088
+          }
+        },
+        "no_verifier": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.2563,
+            "std": 0.0184
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.4208,
+            "std": 0.0128
+          }
+        },
+        "no_gating": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.1104,
+            "std": 0.0193
+          },
+          "false_escalation_rate": {
+            "mean": 0.2646,
+            "std": 0.0147
+          },
+          "proceed_rate": {
+            "mean": 0.4854,
+            "std": 0.0428
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.5146,
+            "std": 0.0428
+          },
+          "action_accuracy": {
+            "mean": 0.3708,
+            "std": 0.0328
+          }
+        },
+        "no_self_consistency": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0229,
+            "std": 0.0106
+          },
+          "false_escalation_rate": {
+            "mean": 0.3771,
+            "std": 0.0147
+          },
+          "proceed_rate": {
+            "mean": 0.0458,
+            "std": 0.0252
+          },
+          "defer_rate": {
+            "mean": 0.025,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.9292,
+            "std": 0.0252
+          },
+          "action_accuracy": {
+            "mean": 0.3354,
+            "std": 0.0236
+          }
+        },
+        "no_regression": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0167,
+            "std": 0.0106
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0479,
+            "std": 0.0106
+          },
+          "defer_rate": {
+            "mean": 0.0125,
+            "std": 0.0102
+          },
+          "escalation_rate": {
+            "mean": 0.9396,
+            "std": 0.0193
+          },
+          "action_accuracy": {
+            "mean": 0.3208,
+            "std": 0.0078
+          }
+        },
+        "rule_only_verifier": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0854,
+            "std": 0.0128
+          },
+          "false_escalation_rate": {
+            "mean": 0.0083,
+            "std": 0.0118
+          },
+          "proceed_rate": {
+            "mean": 0.4125,
+            "std": 0.0418
+          },
+          "defer_rate": {
+            "mean": 0.4729,
+            "std": 0.0179
+          },
+          "escalation_rate": {
+            "mean": 0.1146,
+            "std": 0.0241
+          },
+          "action_accuracy": {
+            "mean": 0.3958,
+            "std": 0.0029
+          }
+        },
+        "model_only_verifier": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0146,
+            "std": 0.0078
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0521,
+            "std": 0.0193
+          },
+          "defer_rate": {
+            "mean": 0.0167,
+            "std": 0.0059
+          },
+          "escalation_rate": {
+            "mean": 0.9312,
+            "std": 0.0222
+          },
+          "action_accuracy": {
+            "mean": 0.3208,
+            "std": 0.0078
+          }
+        },
+        "mlp_verifier": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0333,
+            "std": 0.0078
+          },
+          "false_escalation_rate": {
+            "mean": 0.3104,
+            "std": 0.0206
+          },
+          "proceed_rate": {
+            "mean": 0.1167,
+            "std": 0.034
+          },
+          "defer_rate": {
+            "mean": 0.0312,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.8521,
+            "std": 0.0236
+          },
+          "action_accuracy": {
+            "mean": 0.2854,
+            "std": 0.0078
+          }
+        },
+        "hard_gating": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.025,
+            "std": 0.0184
+          },
+          "false_escalation_rate": {
+            "mean": 0.3833,
+            "std": 0.0059
+          },
+          "proceed_rate": {
+            "mean": 0.0854,
+            "std": 0.0262
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.9146,
+            "std": 0.0262
+          },
+          "action_accuracy": {
+            "mean": 0.3354,
+            "std": 0.0106
+          }
+        },
+        "grid_search": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0125,
+            "std": 0.0088
+          },
+          "false_escalation_rate": {
+            "mean": 0.3917,
+            "std": 0.0118
+          },
+          "proceed_rate": {
+            "mean": 0.0187,
+            "std": 0.0088
+          },
+          "defer_rate": {
+            "mean": 0.0312,
+            "std": 0.0153
+          },
+          "escalation_rate": {
+            "mean": 0.95,
+            "std": 0.0234
+          },
+          "action_accuracy": {
+            "mean": 0.3125,
+            "std": 0.0135
+          }
+        }
+      },
+      "care": {
+        "full": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0147
+          },
+          "f1": {
+            "mean": 0.5886,
+            "std": 0.015
+          },
+          "hallucination_rate": {
+            "mean": 0.0729,
+            "std": 0.0252
+          },
+          "false_escalation_rate": {
+            "mean": 0.3312,
+            "std": 0.0319
+          },
+          "proceed_rate": {
+            "mean": 0.1271,
+            "std": 0.0156
+          },
+          "defer_rate": {
+            "mean": 0.3167,
+            "std": 0.0646
+          },
+          "escalation_rate": {
+            "mean": 0.5563,
+            "std": 0.0589
+          },
+          "action_accuracy": {
+            "mean": 0.1479,
+            "std": 0.0147
+          }
+        },
+        "no_verifier": {
+          "accuracy": {
+            "mean": 0.6021,
+            "std": 0.0128
+          },
+          "f1": {
+            "mean": 0.6006,
+            "std": 0.0144
+          },
+          "hallucination_rate": {
+            "mean": 0.5062,
+            "std": 0.0368
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.4313,
+            "std": 0.0051
+          }
+        },
+        "no_gating": {
+          "accuracy": {
+            "mean": 0.5937,
+            "std": 0.0135
+          },
+          "f1": {
+            "mean": 0.5926,
+            "std": 0.0144
+          },
+          "hallucination_rate": {
+            "mean": 0.1479,
+            "std": 0.0059
+          },
+          "false_escalation_rate": {
+            "mean": 0.3271,
+            "std": 0.0281
+          },
+          "proceed_rate": {
+            "mean": 0.3625,
+            "std": 0.0399
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.6375,
+            "std": 0.0399
+          },
+          "action_accuracy": {
+            "mean": 0.1229,
+            "std": 0.0106
+          }
+        },
+        "no_self_consistency": {
+          "accuracy": {
+            "mean": 0.5958,
+            "std": 0.0156
+          },
+          "f1": {
+            "mean": 0.5949,
+            "std": 0.0162
+          },
+          "hallucination_rate": {
+            "mean": 0.1,
+            "std": 0.0135
+          },
+          "false_escalation_rate": {
+            "mean": 0.3458,
+            "std": 0.0156
+          },
+          "proceed_rate": {
+            "mean": 0.1458,
+            "std": 0.0206
+          },
+          "defer_rate": {
+            "mean": 0.2729,
+            "std": 0.0312
+          },
+          "escalation_rate": {
+            "mean": 0.5812,
+            "std": 0.0265
+          },
+          "action_accuracy": {
+            "mean": 0.1562,
+            "std": 0.0051
+          }
+        },
+        "no_regression": {
+          "accuracy": {
+            "mean": 0.5854,
+            "std": 0.0147
+          },
+          "f1": {
+            "mean": 0.5845,
+            "std": 0.0149
+          },
+          "hallucination_rate": {
+            "mean": 0.0979,
+            "std": 0.0156
+          },
+          "false_escalation_rate": {
+            "mean": 0.3229,
+            "std": 0.0164
+          },
+          "proceed_rate": {
+            "mean": 0.1583,
+            "std": 0.0396
+          },
+          "defer_rate": {
+            "mean": 0.2917,
+            "std": 0.0764
+          },
+          "escalation_rate": {
+            "mean": 0.55,
+            "std": 0.0368
+          },
+          "action_accuracy": {
+            "mean": 0.1375,
+            "std": 0.0368
+          }
+        },
+        "rule_only_verifier": {
+          "accuracy": {
+            "mean": 0.5979,
+            "std": 0.0164
+          },
+          "f1": {
+            "mean": 0.5964,
+            "std": 0.0183
+          },
+          "hallucination_rate": {
+            "mean": 0.3604,
+            "std": 0.0281
+          },
+          "false_escalation_rate": {
+            "mean": 0.1917,
+            "std": 0.0281
+          },
+          "proceed_rate": {
+            "mean": 0.6063,
+            "std": 0.0405
+          },
+          "defer_rate": {
+            "mean": 0.0687,
+            "std": 0.0088
+          },
+          "escalation_rate": {
+            "mean": 0.325,
+            "std": 0.0492
+          },
+          "action_accuracy": {
+            "mean": 0.2708,
+            "std": 0.0059
+          }
+        },
+        "model_only_verifier": {
+          "accuracy": {
+            "mean": 0.5875,
+            "std": 0.0088
+          },
+          "f1": {
+            "mean": 0.5864,
+            "std": 0.0092
+          },
+          "hallucination_rate": {
+            "mean": 0.0854,
+            "std": 0.0128
+          },
+          "false_escalation_rate": {
+            "mean": 0.3229,
+            "std": 0.0212
+          },
+          "proceed_rate": {
+            "mean": 0.1458,
+            "std": 0.0262
+          },
+          "defer_rate": {
+            "mean": 0.3,
+            "std": 0.0561
+          },
+          "escalation_rate": {
+            "mean": 0.5542,
+            "std": 0.0312
+          },
+          "action_accuracy": {
+            "mean": 0.1271,
+            "std": 0.0312
+          }
+        },
+        "mlp_verifier": {
+          "accuracy": {
+            "mean": 0.5938,
+            "std": 0.0184
+          },
+          "f1": {
+            "mean": 0.5925,
+            "std": 0.0192
+          },
+          "hallucination_rate": {
+            "mean": 0.0563,
+            "std": 0.0088
+          },
+          "false_escalation_rate": {
+            "mean": 0.4354,
+            "std": 0.0029
+          },
+          "proceed_rate": {
+            "mean": 0.075,
+            "std": 0.0135
+          },
+          "defer_rate": {
+            "mean": 0.0521,
+            "std": 0.0164
+          },
+          "escalation_rate": {
+            "mean": 0.8729,
+            "std": 0.0106
+          },
+          "action_accuracy": {
+            "mean": 0.0479,
+            "std": 0.0179
+          }
+        },
+        "hard_gating": {
+          "accuracy": {
+            "mean": 0.5917,
+            "std": 0.0193
+          },
+          "f1": {
+            "mean": 0.5909,
+            "std": 0.0196
+          },
+          "hallucination_rate": {
+            "mean": 0.1229,
+            "std": 0.0059
+          },
+          "false_escalation_rate": {
+            "mean": 0.4188,
+            "std": 0.0153
+          },
+          "proceed_rate": {
+            "mean": 0.2021,
+            "std": 0.0179
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.7979,
+            "std": 0.0179
+          },
+          "action_accuracy": {
+            "mean": 0.0479,
+            "std": 0.0029
+          }
+        },
+        "grid_search": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0106
+          },
+          "f1": {
+            "mean": 0.5883,
+            "std": 0.0105
+          },
+          "hallucination_rate": {
+            "mean": 0.0021,
+            "std": 0.0029
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.031
+          },
+          "proceed_rate": {
+            "mean": 0.0063,
+            "std": 0.0051
+          },
+          "defer_rate": {
+            "mean": 0.2896,
+            "std": 0.0617
+          },
+          "escalation_rate": {
+            "mean": 0.7042,
+            "std": 0.0666
+          },
+          "action_accuracy": {
+            "mean": 0.1125,
+            "std": 0.031
+          }
+        }
+      }
+    }
+  },
+  "verification_baselines": {
+    "provenance": "results/verification_baselines.json datasets.*.summary (3 decode seeds; calibration on validation only, coverage-matched)",
+    "paper_table": "tab:verif_baselines",
+    "values": {
+      "pq16": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1625,
+            "std": 0.0184
+          },
+          "false_escalation_rate": {
+            "mean": 0.1333,
+            "std": 0.0029
+          },
+          "proceed_rate": {
+            "mean": 0.4229,
+            "std": 0.0193
+          },
+          "defer_rate": {
+            "mean": 0.0542,
+            "std": 0.0128
+          },
+          "escalation_rate": {
+            "mean": 0.5229,
+            "std": 0.0106
+          },
+          "action_accuracy": {
+            "mean": 0.2875,
+            "std": 0.0088
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1542,
+            "std": 0.0328
+          },
+          "false_escalation_rate": {
+            "mean": 0.1021,
+            "std": 0.0128
+          },
+          "proceed_rate": {
+            "mean": 0.4,
+            "std": 0.0368
+          },
+          "defer_rate": {
+            "mean": 0.0646,
+            "std": 0.0308
+          },
+          "escalation_rate": {
+            "mean": 0.5354,
+            "std": 0.0299
+          },
+          "action_accuracy": {
+            "mean": 0.3375,
+            "std": 0.1119
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.2771,
+            "std": 0.0252
+          },
+          "false_escalation_rate": {
+            "mean": 0.0563,
+            "std": 0.0319
+          },
+          "proceed_rate": {
+            "mean": 0.7771,
+            "std": 0.1129
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.2229,
+            "std": 0.1129
+          },
+          "action_accuracy": {
+            "mean": 0.3188,
+            "std": 0.0051
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.425,
+            "std": 0.0319
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.3375,
+            "std": 0.0234
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "false_escalation_rate": {
+            "mean": 0.1875,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.4375,
+            "std": 0.0
+          }
+        }
+      },
+      "cwru": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0208,
+            "std": 0.0029
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0521,
+            "std": 0.0106
+          },
+          "defer_rate": {
+            "mean": 0.025,
+            "std": 0.0051
+          },
+          "escalation_rate": {
+            "mean": 0.9229,
+            "std": 0.0156
+          },
+          "action_accuracy": {
+            "mean": 0.325,
+            "std": 0.0135
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0083,
+            "std": 0.0029
+          },
+          "false_escalation_rate": {
+            "mean": 0.3833,
+            "std": 0.0236
+          },
+          "proceed_rate": {
+            "mean": 0.0292,
+            "std": 0.0156
+          },
+          "defer_rate": {
+            "mean": 0.0375,
+            "std": 0.0184
+          },
+          "escalation_rate": {
+            "mean": 0.9333,
+            "std": 0.0078
+          },
+          "action_accuracy": {
+            "mean": 0.2687,
+            "std": 0.0255
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0833,
+            "std": 0.0412
+          },
+          "false_escalation_rate": {
+            "mean": 0.3167,
+            "std": 0.056
+          },
+          "proceed_rate": {
+            "mean": 0.3292,
+            "std": 0.1565
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.6708,
+            "std": 0.1565
+          },
+          "action_accuracy": {
+            "mean": 0.3354,
+            "std": 0.0206
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.2625,
+            "std": 0.0088
+          },
+          "false_escalation_rate": {
+            "mean": 0.0083,
+            "std": 0.0029
+          },
+          "proceed_rate": {
+            "mean": 0.9896,
+            "std": 0.0029
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0104,
+            "std": 0.0029
+          },
+          "action_accuracy": {
+            "mean": 0.4229,
+            "std": 0.0078
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "false_escalation_rate": {
+            "mean": 0.4,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.3,
+            "std": 0.0
+          }
+        }
+      },
+      "care": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.5917,
+            "std": 0.0029
+          },
+          "f1": {
+            "mean": 0.5905,
+            "std": 0.003
+          },
+          "hallucination_rate": {
+            "mean": 0.1125,
+            "std": 0.031
+          },
+          "false_escalation_rate": {
+            "mean": 0.3208,
+            "std": 0.0281
+          },
+          "proceed_rate": {
+            "mean": 0.1708,
+            "std": 0.0128
+          },
+          "defer_rate": {
+            "mean": 0.2833,
+            "std": 0.0536
+          },
+          "escalation_rate": {
+            "mean": 0.5458,
+            "std": 0.0474
+          },
+          "action_accuracy": {
+            "mean": 0.1646,
+            "std": 0.0569
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0106
+          },
+          "f1": {
+            "mean": 0.5884,
+            "std": 0.0107
+          },
+          "hallucination_rate": {
+            "mean": 0.0667,
+            "std": 0.0257
+          },
+          "false_escalation_rate": {
+            "mean": 0.3396,
+            "std": 0.0516
+          },
+          "proceed_rate": {
+            "mean": 0.1479,
+            "std": 0.0471
+          },
+          "defer_rate": {
+            "mean": 0.1458,
+            "std": 0.0383
+          },
+          "escalation_rate": {
+            "mean": 0.7062,
+            "std": 0.0821
+          },
+          "action_accuracy": {
+            "mean": 0.1458,
+            "std": 0.044
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.5938,
+            "std": 0.0088
+          },
+          "f1": {
+            "mean": 0.5925,
+            "std": 0.0106
+          },
+          "hallucination_rate": {
+            "mean": 0.4083,
+            "std": 0.1175
+          },
+          "false_escalation_rate": {
+            "mean": 0.0625,
+            "std": 0.0707
+          },
+          "proceed_rate": {
+            "mean": 0.8479,
+            "std": 0.1798
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.1521,
+            "std": 0.1798
+          },
+          "action_accuracy": {
+            "mean": 0.4042,
+            "std": 0.0873
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.6021,
+            "std": 0.0128
+          },
+          "f1": {
+            "mean": 0.6005,
+            "std": 0.0143
+          },
+          "hallucination_rate": {
+            "mean": 0.4937,
+            "std": 0.0368
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.4625,
+            "std": 0.0135
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0106
+          },
+          "f1": {
+            "mean": 0.5883,
+            "std": 0.0105
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "false_escalation_rate": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "action_accuracy": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      }
+    }
+  },
+  "mopso_pareto_front": {
+    "provenance": "results/mopso_results.json pareto_front + results/operating_point.json",
+    "paper_figure": "fig:pareto (paper/figures/pareto_front_v3.pdf)",
+    "n_unique_points": 8,
+    "f1_constant": 0.9351,
+    "points": [
+      {
+        "f1": 0.9351,
+        "hallucination": 0.1786,
+        "handoff_rate": 0.5446,
+        "n_param_sets": 1,
+        "delta_values": [
+          0.0
+        ],
+        "M_values": [
+          5
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.1071,
+        "handoff_rate": 0.5893,
+        "n_param_sets": 2,
+        "delta_values": [
+          0.0
+        ],
+        "M_values": [
+          7
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0804,
+        "handoff_rate": 0.8036,
+        "n_param_sets": 4,
+        "delta_values": [
+          0.0776
+        ],
+        "M_values": [
+          9
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0357,
+        "handoff_rate": 0.8304,
+        "n_param_sets": 1,
+        "delta_values": [
+          0.0282
+        ],
+        "M_values": [
+          7
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0268,
+        "handoff_rate": 0.8482,
+        "n_param_sets": 6,
+        "delta_values": [
+          0.0,
+          0.0183
+        ],
+        "M_values": [
+          7
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0179,
+        "handoff_rate": 0.8929,
+        "n_param_sets": 1,
+        "delta_values": [
+          0.0
+        ],
+        "M_values": [
+          3
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0089,
+        "handoff_rate": 0.9375,
+        "n_param_sets": 1,
+        "delta_values": [
+          0.1407
+        ],
+        "M_values": [
+          7
+        ]
+      },
+      {
+        "f1": 0.9351,
+        "hallucination": 0.0,
+        "handoff_rate": 1.0,
+        "n_param_sets": 14,
+        "delta_values": [
+          0.0,
+          0.0273,
+          0.0483
+        ],
+        "M_values": [
+          3,
+          5,
+          7
+        ]
+      }
+    ],
+    "deployed_operating_point": {
+      "params": {
+        "alpha_p": 0.5,
+        "alpha_d": 0.265562163503954,
+        "delta": 0.0,
+        "lambda_r": 0.1,
+        "M": 7,
+        "beta": 0.01,
+        "beta_requested": 0.007067309408286756
+      },
+      "objectives": {
+        "f1": 0.9351,
+        "hallucination": 0.1071,
+        "handoff_rate": 0.5893
+      }
+    }
+  },
+  "moo_comparison": {
+    "provenance": "results/moo_comparison.json (10 paired runs, 5050 evals/run, reference front = union)",
+    "paper_table": "tab:optimizer_compare",
+    "summary": {
+      "mopso": {
+        "hypervolume": {
+          "mean": 0.8202,
+          "std": 0.0322
+        },
+        "igd": {
+          "mean": 0.0674,
+          "std": 0.0176
+        },
+        "spread": {
+          "mean": 1.4036,
+          "std": 0.2031
+        }
+      },
+      "nsga2": {
+        "hypervolume": {
+          "mean": 0.5929,
+          "std": 0.0079
+        },
+        "igd": {
+          "mean": 0.1874,
+          "std": 0.0075
+        },
+        "spread": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "significance": {
+      "hypervolume": {
+        "p_raw": 0.001953,
+        "p_holm": 0.005859,
+        "better_mean": "mopso"
+      },
+      "igd": {
+        "p_raw": 0.001953,
+        "p_holm": 0.005859,
+        "better_mean": "mopso"
+      },
+      "spread": {
+        "p_raw": 0.001953,
+        "p_holm": 0.005859,
+        "better_mean": "nsga2"
+      }
+    }
+  },
+  "non_ruspini_robustness": {
+    "provenance": "results/non_ruspini_robustness.json (simultaneous +-0.05/+-0.10 shifts of six breakpoints, 3 seeds)",
+    "paper_location": "sec:ablation robustness paragraph",
+    "values": {
+      "pq16": {
+        "max_abs_delta_from_unshifted": {
+          "accuracy": 0.0,
+          "f1": 0.0,
+          "hallucination_rate": 0.0375,
+          "action_accuracy": 0.0292,
+          "false_escalation_rate": 0.0063,
+          "proceed_rate": 0.0938,
+          "defer_rate": 0.0188,
+          "escalation_rate": 0.0771
+        }
+      },
+      "cwru": {
+        "max_abs_delta_from_unshifted": {
+          "accuracy": 0.0,
+          "f1": 0.0,
+          "hallucination_rate": 0.0042,
+          "action_accuracy": 0.0125,
+          "false_escalation_rate": 0.0083,
+          "proceed_rate": 0.0208,
+          "defer_rate": 0.0146,
+          "escalation_rate": 0.0104
+        }
+      },
+      "care": {
+        "max_abs_delta_from_unshifted": {
+          "accuracy": 0.0021,
+          "f1": 0.0022,
+          "hallucination_rate": 0.0229,
+          "action_accuracy": 0.0083,
+          "false_escalation_rate": 0.0208,
+          "proceed_rate": 0.0417,
+          "defer_rate": 0.0021,
+          "escalation_rate": 0.0417
+        }
+      },
+      "partition_diagnostics_shift_+0.00": {
+        "mean_abs_sum_minus_one": 0.05,
+        "max_abs_sum_minus_one": 0.2,
+        "ambiguity_fraction_sum_gt_one": 0.0,
+        "gap_fraction_sum_lt_one": 0.4975
+      }
+    }
+  },
+  "regression_crossdomain": {
+    "provenance": "results/regression_crossdomain.json pass_rate_matrix (5 cycles/cell)",
+    "paper_table": "tab:regression",
+    "values": {
+      "tolerances": {
+        "max_f1_drop": 0.01,
+        "max_hallucination_increase": 0.01,
+        "max_false_escalation_increase": 0.02
+      },
+      "pass_rate_matrix": {
+        "pq16": {
+          "pq16": {
+            "pass_rate": 0.0,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.1304,
+              "false_escalation_rate": 0.0607
+            }
+          },
+          "cwru": {
+            "pass_rate": 1.0,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.0117,
+              "false_escalation_rate": -0.0067
+            }
+          },
+          "care": {
+            "pass_rate": 0.0,
+            "mean_deltas": {
+              "f1": -0.0084,
+              "hallucination_rate": -0.0733,
+              "false_escalation_rate": 0.1717
+            }
+          }
+        },
+        "cwru": {
+          "pq16": {
+            "pass_rate": 0.0,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.0554,
+              "false_escalation_rate": 0.0446
+            }
+          },
+          "cwru": {
+            "pass_rate": 1.0,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.0117,
+              "false_escalation_rate": -0.0533
+            }
+          },
+          "care": {
+            "pass_rate": 0.0,
+            "mean_deltas": {
+              "f1": 0.0025,
+              "hallucination_rate": 0.0133,
+              "false_escalation_rate": 0.055
+            }
+          }
+        },
+        "care": {
+          "pq16": {
+            "pass_rate": 0.2,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.0857,
+              "false_escalation_rate": 0.0429
+            }
+          },
+          "cwru": {
+            "pass_rate": 1.0,
+            "mean_deltas": {
+              "f1": 0.0,
+              "hallucination_rate": -0.0067,
+              "false_escalation_rate": -0.01
+            }
+          },
+          "care": {
+            "pass_rate": 0.0,
+            "mean_deltas": {
+              "f1": 0.0021,
+              "hallucination_rate": 0.0017,
+              "false_escalation_rate": 0.1033
+            }
+          }
+        }
+      }
+    }
+  },
+  "backbone_comparison": {
+    "provenance": "results/backbone_results.json (Mistral) + results/ablation_results.json full variant (Llama-3.1), both 3 decode seeds",
+    "paper_table": "tab:backbone",
+    "values": {
+      "pq16": {
+        "mistral7b": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.0854,
+            "std": 0.0078
+          },
+          "false_escalation_rate": {
+            "mean": 0.0938,
+            "std": 0.0135
+          },
+          "proceed_rate": {
+            "mean": 0.3792,
+            "std": 0.0078
+          },
+          "defer_rate": {
+            "mean": 0.0688,
+            "std": 0.0102
+          },
+          "escalation_rate": {
+            "mean": 0.5521,
+            "std": 0.0164
+          },
+          "action_accuracy": {
+            "mean": 0.3313,
+            "std": 0.0051
+          }
+        },
+        "llama31_8b_full_variant": {
+          "accuracy": {
+            "mean": 0.9333,
+            "std": 0.0179
+          },
+          "f1": {
+            "mean": 0.9307,
+            "std": 0.0191
+          },
+          "hallucination_rate": {
+            "mean": 0.1646,
+            "std": 0.0118
+          },
+          "false_escalation_rate": {
+            "mean": 0.1271,
+            "std": 0.0078
+          },
+          "proceed_rate": {
+            "mean": 0.4062,
+            "std": 0.0184
+          },
+          "defer_rate": {
+            "mean": 0.0375,
+            "std": 0.0135
+          },
+          "escalation_rate": {
+            "mean": 0.5563,
+            "std": 0.0319
+          },
+          "action_accuracy": {
+            "mean": 0.3187,
+            "std": 0.0222
+          }
+        }
+      },
+      "cwru": {
+        "mistral7b": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0125,
+            "std": 0.0088
+          },
+          "false_escalation_rate": {
+            "mean": 0.3729,
+            "std": 0.023
+          },
+          "proceed_rate": {
+            "mean": 0.0271,
+            "std": 0.0212
+          },
+          "defer_rate": {
+            "mean": 0.0292,
+            "std": 0.0179
+          },
+          "escalation_rate": {
+            "mean": 0.9437,
+            "std": 0.0357
+          },
+          "action_accuracy": {
+            "mean": 0.3292,
+            "std": 0.0206
+          }
+        },
+        "llama31_8b_full_variant": {
+          "accuracy": {
+            "mean": 0.9854,
+            "std": 0.0059
+          },
+          "f1": {
+            "mean": 0.9853,
+            "std": 0.0059
+          },
+          "hallucination_rate": {
+            "mean": 0.0167,
+            "std": 0.0156
+          },
+          "false_escalation_rate": {
+            "mean": 0.3937,
+            "std": 0.0051
+          },
+          "proceed_rate": {
+            "mean": 0.0375,
+            "std": 0.0153
+          },
+          "defer_rate": {
+            "mean": 0.0167,
+            "std": 0.0029
+          },
+          "escalation_rate": {
+            "mean": 0.9458,
+            "std": 0.0128
+          },
+          "action_accuracy": {
+            "mean": 0.3188,
+            "std": 0.0088
+          }
+        }
+      },
+      "care": {
+        "mistral7b": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0106
+          },
+          "f1": {
+            "mean": 0.5883,
+            "std": 0.0105
+          },
+          "hallucination_rate": {
+            "mean": 0.0271,
+            "std": 0.0206
+          },
+          "false_escalation_rate": {
+            "mean": 0.2313,
+            "std": 0.0405
+          },
+          "proceed_rate": {
+            "mean": 0.2146,
+            "std": 0.0386
+          },
+          "defer_rate": {
+            "mean": 0.3813,
+            "std": 0.0772
+          },
+          "escalation_rate": {
+            "mean": 0.4042,
+            "std": 0.063
+          },
+          "action_accuracy": {
+            "mean": 0.2458,
+            "std": 0.0428
+          }
+        },
+        "llama31_8b_full_variant": {
+          "accuracy": {
+            "mean": 0.5896,
+            "std": 0.0147
+          },
+          "f1": {
+            "mean": 0.5886,
+            "std": 0.015
+          },
+          "hallucination_rate": {
+            "mean": 0.0729,
+            "std": 0.0252
+          },
+          "false_escalation_rate": {
+            "mean": 0.3312,
+            "std": 0.0319
+          },
+          "proceed_rate": {
+            "mean": 0.1271,
+            "std": 0.0156
+          },
+          "defer_rate": {
+            "mean": 0.3167,
+            "std": 0.0646
+          },
+          "escalation_rate": {
+            "mean": 0.5563,
+            "std": 0.0589
+          },
+          "action_accuracy": {
+            "mean": 0.1479,
+            "std": 0.0147
+          }
+        }
+      }
+    }
+  },
+  "classical_baselines": {
+    "provenance": "results/experiment_results.json (run_main.py main_classification output; v2 campaign artifact, LLM-independent stage, sentinel preserved by v3). Single deterministic run, seed 42, full held-out test splits (36001/883/34746). Scale verified: all 30 accuracy/top3 values invert to integer correct-counts at full-scale test denominators.",
+    "paper_table": "tab:recent_sota (classical block)",
+    "seed": 42,
+    "values": {
+      "pq16": {
+        "svm": {
+          "accuracy": 0.9647,
+          "f1": 0.9644,
+          "top3_accuracy": 0.9979
+        },
+        "xgboost": {
+          "accuracy": 0.9822,
+          "f1": 0.982,
+          "top3_accuracy": 0.9994
+        },
+        "anfis": {
+          "accuracy": 0.7752,
+          "f1": 0.768,
+          "top3_accuracy": 0.9852
+        },
+        "cnn1d": {
+          "accuracy": 0.9914,
+          "f1": 0.9914,
+          "top3_accuracy": 0.9999
+        },
+        "transformer": {
+          "accuracy": 0.9963,
+          "f1": 0.9963,
+          "top3_accuracy": 0.9999
+        }
+      },
+      "cwru": {
+        "svm": {
+          "accuracy": 0.9638,
+          "f1": 0.9554,
+          "top3_accuracy": 0.9966
+        },
+        "xgboost": {
+          "accuracy": 0.9898,
+          "f1": 0.9872,
+          "top3_accuracy": 0.9966
+        },
+        "anfis": {
+          "accuracy": 0.846,
+          "f1": 0.8156,
+          "top3_accuracy": 0.9604
+        },
+        "cnn1d": {
+          "accuracy": 1.0,
+          "f1": 1.0,
+          "top3_accuracy": 1.0
+        },
+        "transformer": {
+          "accuracy": 0.9694,
+          "f1": 0.9617,
+          "top3_accuracy": 0.9989
+        }
+      },
+      "care": {
+        "svm": {
+          "accuracy": 0.5881,
+          "f1": 0.5658,
+          "top3_accuracy": 1.0
+        },
+        "xgboost": {
+          "accuracy": 0.5659,
+          "f1": 0.5454,
+          "top3_accuracy": 1.0
+        },
+        "anfis": {
+          "accuracy": 0.6024,
+          "f1": 0.5612,
+          "top3_accuracy": 1.0
+        },
+        "cnn1d": {
+          "accuracy": 0.4742,
+          "f1": 0.4727,
+          "top3_accuracy": 1.0
+        },
+        "transformer": {
+          "accuracy": 0.6106,
+          "f1": 0.3791,
+          "top3_accuracy": 1.0
+        }
+      }
+    }
+  },
+  "recent_sota_reproductions": {
+    "provenance": "results/recent_sota.json (v2 campaign artifact, LLM-generation-independent stage; sentinel preserved by v3 orchestrator). Repository-split reproductions, 3 seeds; no source-paper numbers.",
+    "paper_table": "tab:recent_sota",
+    "reviewer_item": "R4.4",
+    "protocols": {
+      "timestamp": "2026-07-22T15:25:12",
+      "reviewer_item": "R4.4",
+      "reporting": "repository-split reimplementations; no numbers copied from source papers",
+      "fdllm": {
+        "source": "arXiv:2412.01218",
+        "protocol": "15 statistical features, rank-4 LoRA, lr=1e-4, bf16, 3 epochs"
+      },
+      "t2mfdf": {
+        "source": "IEEE TIM 2025",
+        "doi": "10.1109/TIM.2025.3583374",
+        "protocol": "time-series encoder + fault-description BERT-family embeddings + multimodal fusion"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    "values": {
+      "pq16": {
+        "fdllm": {
+          "accuracy": {
+            "mean": 0.6488,
+            "std": 0.0137
+          },
+          "f1": {
+            "mean": 0.6383,
+            "std": 0.0157
+          }
+        },
+        "t2mfdf": {
+          "accuracy": {
+            "mean": 0.9245,
+            "std": 0.0171
+          },
+          "f1": {
+            "mean": 0.9214,
+            "std": 0.02
+          }
+        }
+      },
+      "cwru": {
+        "fdllm": {
+          "accuracy": {
+            "mean": 0.9067,
+            "std": 0.0074
+          },
+          "f1": {
+            "mean": 0.9053,
+            "std": 0.0078
+          }
+        },
+        "t2mfdf": {
+          "accuracy": {
+            "mean": 0.9996,
+            "std": 0.0006
+          },
+          "f1": {
+            "mean": 0.9995,
+            "std": 0.0007
+          }
+        }
+      },
+      "care": {
+        "fdllm": {
+          "accuracy": {
+            "mean": 0.5067,
+            "std": 0.0249
+          },
+          "f1": {
+            "mean": 0.4903,
+            "std": 0.0417
+          }
+        },
+        "t2mfdf": {
+          "accuracy": {
+            "mean": 0.5758,
+            "std": 0.0238
+          },
+          "f1": {
+            "mean": 0.567,
+            "std": 0.0287
+          }
+        }
+      }
+    },
+    "perception_layer_reference": {
+      "pq16": {
+        "mean": 0.9304,
+        "std": 0.0105
+      },
+      "cwru": {
+        "mean": 0.9835,
+        "std": 0.0064
+      },
+      "care": {
+        "mean": 0.5748,
+        "std": 0.0187
+      }
+    }
+  },
+  "independent_judge_agreement": {
+    "provenance": "results/independent_judge.json (rule judge vs deberta-v2-xlarge-mnli, n=1440)",
+    "paper_location": "sec:reliability independent judging paragraph",
+    "values": {
+      "overall": {
+        "n": 1440,
+        "raw_agreement": 0.5479,
+        "automated_judge_kappa": 0.1123,
+        "rule_positive_rate": 0.3715,
+        "nli_positive_rate": 0.5361,
+        "note": "Automated-judge agreement; not human inter-annotator agreement."
+      },
+      "per_dataset": {
+        "pq16": {
+          "n": 480,
+          "raw_agreement": 0.5958,
+          "automated_judge_kappa": 0.135,
+          "rule_positive_rate": 0.4042,
+          "nli_positive_rate": 0.3292,
+          "note": "Automated-judge agreement; not human inter-annotator agreement."
+        },
+        "cwru": {
+          "n": 480,
+          "raw_agreement": 0.4604,
+          "automated_judge_kappa": 0.0578,
+          "rule_positive_rate": 0.2188,
+          "nli_positive_rate": 0.6292,
+          "note": "Automated-judge agreement; not human inter-annotator agreement."
+        },
+        "care": {
+          "n": 480,
+          "raw_agreement": 0.5875,
+          "automated_judge_kappa": 0.1791,
+          "rule_positive_rate": 0.4917,
+          "nli_positive_rate": 0.65,
+          "note": "Automated-judge agreement; not human inter-annotator agreement."
+        }
+      },
+      "human_audit": "pending"
+    }
+  },
+  "latency_ms": {
+    "provenance": "results/statistical_protocol.json raw_metrics avg_time_ms (shared pipeline generations)",
+    "paper_location": "sec:llmops computational cost paragraph",
+    "values": {
+      "pq16": {
+        "mean": 8321.2487,
+        "std": 568.6062
+      },
+      "cwru": {
+        "mean": 6741.3132,
+        "std": 187.2626
+      },
+      "care": {
+        "mean": 7853.2654,
+        "std": 537.7904
+      }
+    }
+  },
+  "caevn_training": {
+    "provenance": "results/logs/caevn_{pq16,cwru,care}.log",
+    "paper_location": "sec:implementation + appendix app:verifier",
+    "values": {
+      "pq16": {
+        "n_triples": 8976,
+        "n_episodes": 2992,
+        "support": 1716,
+        "contradict": 1276,
+        "neutral": 0,
+        "epochs": 50,
+        "beta": 0.01,
+        "final_val_loss": 0.0013,
+        "mlp_final_val_loss": 0.0065
+      },
+      "cwru": {
+        "n_triples": 9000,
+        "n_episodes": 3000,
+        "support": 2209,
+        "contradict": 790,
+        "neutral": 1,
+        "epochs": 50,
+        "beta": 0.01,
+        "final_val_loss": 0.0062
+      },
+      "care": {
+        "n_triples": 9000,
+        "n_episodes": 3000,
+        "support": 1615,
+        "contradict": 1384,
+        "neutral": 1,
+        "epochs": 50,
+        "beta": 0.01,
+        "final_val_loss": 0.0
+      }
+    }
+  },
+  "judge_robustness": {
+    "provenance": "results/independent_judge.json audit_rows (3 decode seeds x 160 episodes per dataset, gate decisions and both judges' verdicts from the same run)",
+    "paper_section": "sec:reliability",
+    "definition": "released-hallucination rate = fraction of all episodes in which a judge-flagged hypothesis is gated to proceed; Agent-noV proceeds on all episodes by construction",
+    "n_episodes_per_dataset": 480,
+    "values": {
+      "pq16": {
+        "rule": {
+          "agent_nov": {
+            "mean": 0.4042,
+            "std": 0.026,
+            "per_seed": [
+              0.425,
+              0.375,
+              0.4125
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.175,
+            "std": 0.0451,
+            "per_seed": [
+              0.2125,
+              0.125,
+              0.1875
+            ]
+          },
+          "reduction_pp": 22.92
+        },
+        "nli": {
+          "agent_nov": {
+            "mean": 0.3292,
+            "std": 0.0416,
+            "per_seed": [
+              0.375,
+              0.3187,
+              0.2938
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.1146,
+            "std": 0.0295,
+            "per_seed": [
+              0.125,
+              0.0813,
+              0.1375
+            ]
+          },
+          "reduction_pp": 21.46
+        }
+      },
+      "cwru": {
+        "rule": {
+          "agent_nov": {
+            "mean": 0.2188,
+            "std": 0.025,
+            "per_seed": [
+              0.2437,
+              0.2188,
+              0.1938
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.0125,
+            "std": 0.0062,
+            "per_seed": [
+              0.0187,
+              0.0063,
+              0.0125
+            ]
+          },
+          "reduction_pp": 20.63
+        },
+        "nli": {
+          "agent_nov": {
+            "mean": 0.6292,
+            "std": 0.0237,
+            "per_seed": [
+              0.6562,
+              0.6188,
+              0.6125
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.0208,
+            "std": 0.0219,
+            "per_seed": [
+              0.0437,
+              0.0187,
+              0.0
+            ]
+          },
+          "reduction_pp": 60.84
+        }
+      },
+      "care": {
+        "rule": {
+          "agent_nov": {
+            "mean": 0.4917,
+            "std": 0.0402,
+            "per_seed": [
+              0.4625,
+              0.475,
+              0.5375
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.1,
+            "std": 0.0165,
+            "per_seed": [
+              0.0875,
+              0.1187,
+              0.0938
+            ]
+          },
+          "reduction_pp": 39.17
+        },
+        "nli": {
+          "agent_nov": {
+            "mean": 0.65,
+            "std": 0.0845,
+            "per_seed": [
+              0.5625,
+              0.6562,
+              0.7312
+            ]
+          },
+          "cl_llmops": {
+            "mean": 0.0854,
+            "std": 0.013,
+            "per_seed": [
+              0.0813,
+              0.1,
+              0.075
+            ]
+          },
+          "reduction_pp": 56.46
+        }
+      }
+    }
+  },
+  "per_domain_recalibration": {
+    "provenance": "results/regression_crossdomain.json per_cycle, in_domain rows (baseline = global PQ-tuned operating point, updated = that domain's own MOPSO re-tuning on its validation split)",
+    "paper_section": "sec:main_results",
+    "caveat": "evaluated on each domain's regression suite, which oversamples escalated and disagreement episodes; absolute rates are not comparable to tab:main, the paired baseline-vs-updated contrast is",
+    "values": {
+      "pq16": {
+        "n_cycles": 5,
+        "n_episodes": 112,
+        "retuned_params": {
+          "alpha_p": 0.7119718565990473,
+          "alpha_d": 0.1,
+          "delta": 0.2,
+          "lambda_r": 0.1,
+          "M": 3,
+          "beta": 0.1
+        },
+        "proceed_rate": {
+          "global_operating_point": 0.3804,
+          "re_tuned": 0.0446,
+          "delta": -0.3357
+        },
+        "hallucination_rate": {
+          "global_operating_point": 0.1518,
+          "re_tuned": 0.0214,
+          "delta": -0.1304
+        },
+        "action_accuracy": {
+          "global_operating_point": 0.3429,
+          "re_tuned": 0.4714,
+          "delta": 0.1286
+        },
+        "false_escalation_rate": {
+          "global_operating_point": 0.1268,
+          "re_tuned": 0.1875,
+          "delta": 0.0607
+        },
+        "escalation_rate": {
+          "global_operating_point": 0.55,
+          "re_tuned": 0.9554,
+          "delta": 0.4054
+        },
+        "defer_rate": {
+          "global_operating_point": 0.0696,
+          "re_tuned": 0.0,
+          "delta": -0.0696
+        },
+        "accuracy": {
+          "global_operating_point": 0.9339,
+          "re_tuned": 0.9339,
+          "delta": 0.0
+        },
+        "f1": {
+          "global_operating_point": 0.9317,
+          "re_tuned": 0.9317,
+          "delta": 0.0
+        }
+      },
+      "cwru": {
+        "n_cycles": 5,
+        "n_episodes": 120,
+        "retuned_params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.22548520993785445,
+          "delta": 0.12133167347375827,
+          "lambda_r": 0.7,
+          "M": 9,
+          "beta": 0.001
+        },
+        "proceed_rate": {
+          "global_operating_point": 0.0267,
+          "re_tuned": 0.0067,
+          "delta": -0.02
+        },
+        "hallucination_rate": {
+          "global_operating_point": 0.0117,
+          "re_tuned": 0.0,
+          "delta": -0.0117
+        },
+        "action_accuracy": {
+          "global_operating_point": 0.305,
+          "re_tuned": 0.3017,
+          "delta": -0.0033
+        },
+        "false_escalation_rate": {
+          "global_operating_point": 0.395,
+          "re_tuned": 0.3417,
+          "delta": -0.0533
+        },
+        "escalation_rate": {
+          "global_operating_point": 0.9467,
+          "re_tuned": 0.8933,
+          "delta": -0.0533
+        },
+        "defer_rate": {
+          "global_operating_point": 0.0267,
+          "re_tuned": 0.1,
+          "delta": 0.0733
+        },
+        "accuracy": {
+          "global_operating_point": 0.9983,
+          "re_tuned": 0.9983,
+          "delta": 0.0
+        },
+        "f1": {
+          "global_operating_point": 0.9983,
+          "re_tuned": 0.9983,
+          "delta": 0.0
+        }
+      },
+      "care": {
+        "n_cycles": 5,
+        "n_episodes": 120,
+        "retuned_params": {
+          "alpha_p": 0.5,
+          "alpha_d": 0.1,
+          "delta": 0.11410551120929593,
+          "lambda_r": 0.2728141661665128,
+          "M": 7,
+          "beta": 0.08145791799640928
+        },
+        "proceed_rate": {
+          "global_operating_point": 0.1367,
+          "re_tuned": 0.1383,
+          "delta": 0.0017
+        },
+        "hallucination_rate": {
+          "global_operating_point": 0.0817,
+          "re_tuned": 0.0833,
+          "delta": 0.0017
+        },
+        "action_accuracy": {
+          "global_operating_point": 0.1417,
+          "re_tuned": 0.0383,
+          "delta": -0.1033
+        },
+        "false_escalation_rate": {
+          "global_operating_point": 0.3233,
+          "re_tuned": 0.4267,
+          "delta": 0.1033
+        },
+        "escalation_rate": {
+          "global_operating_point": 0.6467,
+          "re_tuned": 0.8617,
+          "delta": 0.215
+        },
+        "defer_rate": {
+          "global_operating_point": 0.2167,
+          "re_tuned": 0.0,
+          "delta": -0.2167
+        },
+        "accuracy": {
+          "global_operating_point": 0.44,
+          "re_tuned": 0.4417,
+          "delta": 0.0017
+        },
+        "f1": {
+          "global_operating_point": 0.4282,
+          "re_tuned": 0.4303,
+          "delta": 0.0021
+        }
+      }
+    }
+  },
+  "verifier_bootstrap": {
+    "provenance": "results/verifier_bootstrap.json (5 independent draws of the CAEVN training pool; each fold re-decoded and retrained from scratch, evaluated on the paired comparison with the deployed operating point fixed)",
+    "paper_section": "sec:main_results",
+    "values": {
+      "pq16": {
+        "n_folds": 5,
+        "reduction_pp": {
+          "mean": 25.54,
+          "std": 2.75,
+          "min": 21.25,
+          "max": 27.92,
+          "per_fold": [
+            24.58,
+            21.25,
+            27.71,
+            27.92,
+            26.25
+          ]
+        },
+        "cl_llmops_hallucination": {
+          "mean": 0.1546,
+          "per_fold": [
+            0.1604,
+            0.1896,
+            0.1375,
+            0.1458,
+            0.1396
+          ]
+        },
+        "agent_nov_hallucination": {
+          "mean": 0.41,
+          "per_fold": [
+            0.4062,
+            0.4021,
+            0.4146,
+            0.425,
+            0.4021
+          ]
+        }
+      },
+      "cwru": {
+        "n_folds": 5,
+        "reduction_pp": {
+          "mean": 24.25,
+          "std": 1.49,
+          "min": 21.87,
+          "max": 25.83,
+          "per_fold": [
+            25.0,
+            21.87,
+            23.96,
+            25.83,
+            24.58
+          ]
+        },
+        "cl_llmops_hallucination": {
+          "mean": 0.0117,
+          "per_fold": [
+            0.0,
+            0.0396,
+            0.0167,
+            0.0,
+            0.0021
+          ]
+        },
+        "agent_nov_hallucination": {
+          "mean": 0.2542,
+          "per_fold": [
+            0.25,
+            0.2583,
+            0.2562,
+            0.2583,
+            0.2479
+          ]
+        }
+      },
+      "care": {
+        "n_folds": 5,
+        "reduction_pp": {
+          "mean": 42.71,
+          "std": 1.29,
+          "min": 41.25,
+          "max": 44.17,
+          "per_fold": [
+            41.25,
+            43.12,
+            43.54,
+            41.46,
+            44.17
+          ]
+        },
+        "cl_llmops_hallucination": {
+          "mean": 0.0737,
+          "per_fold": [
+            0.0771,
+            0.0813,
+            0.0687,
+            0.0771,
+            0.0646
+          ]
+        },
+        "agent_nov_hallucination": {
+          "mean": 0.5008,
+          "per_fold": [
+            0.4896,
+            0.5125,
+            0.5042,
+            0.4917,
+            0.5062
+          ]
+        }
+      }
+    }
+  }
+}

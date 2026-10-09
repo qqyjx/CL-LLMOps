@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+experiments/data/raw/
+experiments/data/processed/
+experiments/checkpoints/
+results/logs/

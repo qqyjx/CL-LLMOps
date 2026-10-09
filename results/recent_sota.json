@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-22T15:25:12",
+    "reviewer_item": "R4.4",
+    "reporting": "repository-split reimplementations; no numbers copied from source papers",
+    "fdllm": {
+      "source": "arXiv:2412.01218",
+      "protocol": "15 statistical features, rank-4 LoRA, lr=1e-4, bf16, 3 epochs"
+    },
+    "t2mfdf": {
+      "source": "IEEE TIM 2025",
+      "doi": "10.1109/TIM.2025.3583374",
+      "protocol": "time-series encoder + fault-description BERT-family embeddings + multimodal fusion"
+    },
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "datasets": {
+    "pq16": {
+      "fdllm": {
+        "per_seed": [
+          {
+            "accuracy": 0.65375,
+            "f1": 0.6442744348483354,
+            "top3_accuracy": null,
+            "n_train": 3200,
+            "n_test": 800,
+            "seed": 0,
+            "adapter": "experiments/checkpoints/fdllm_pq16_seed0",
+            "elapsed_seconds": 1258.1061482429504,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.63,
+            "f1": 0.6167050116790607,
+            "top3_accuracy": null,
+            "n_train": 3200,
+            "n_test": 800,
+            "seed": 1,
+            "adapter": "experiments/checkpoints/fdllm_pq16_seed1",
+            "elapsed_seconds": 1354.5701777935028,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.6625,
+            "f1": 0.6538054442590091,
+            "top3_accuracy": null,
+            "n_train": 3200,
+            "n_test": 800,
+            "seed": 2,
+            "adapter": "experiments/checkpoints/fdllm_pq16_seed2",
+            "elapsed_seconds": 1345.1416273117065,
+            "trainable_parameters": 1703936
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.64875,
+            "std": 0.013731047544403397,
+            "raw": [
+              0.65375,
+              0.63,
+              0.6625
+            ]
+          },
+          "f1": {
+            "mean": 0.638261630262135,
+            "std": 0.015731621841558453,
+            "raw": [
+              0.6442744348483354,
+              0.6167050116790607,
+              0.6538054442590091
+            ]
+          },
+          "top3_accuracy": null
+        }
+      },
+      "t2mfdf": {
+        "per_seed": [
+          {
+            "accuracy": 0.9446875,
+            "f1": 0.9438819086588491,
+            "top3_accuracy": 0.99875,
+            "n_train": 8000,
+            "n_val": 1600,
+            "n_test": 3200,
+            "seed": 0
+          },
+          {
+            "accuracy": 0.9028125,
+            "f1": 0.8953813673331418,
+            "top3_accuracy": 0.9971875,
+            "n_train": 8000,
+            "n_val": 1600,
+            "n_test": 3200,
+            "seed": 1
+          },
+          {
+            "accuracy": 0.9259375,
+            "f1": 0.9249112457432668,
+            "top3_accuracy": 0.9959375,
+            "n_train": 8000,
+            "n_val": 1600,
+            "n_test": 3200,
+            "seed": 2
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.9244791666666666,
+            "std": 0.017126469928803838,
+            "raw": [
+              0.9446875,
+              0.9028125,
+              0.9259375
+            ]
+          },
+          "f1": {
+            "mean": 0.9213915072450859,
+            "std": 0.019956069194497265,
+            "raw": [
+              0.9438819086588491,
+              0.8953813673331418,
+              0.9249112457432668
+            ]
+          },
+          "top3_accuracy": {
+            "mean": 0.9972916666666668,
+            "std": 0.0011505584392903386,
+            "raw": [
+              0.99875,
+              0.9971875,
+              0.9959375
+            ]
+          }
+        }
+      }
+    },
+    "cwru": {
+      "fdllm": {
+        "per_seed": [
+          {
+            "accuracy": 0.906,
+            "f1": 0.9038284586426244,
+            "top3_accuracy": null,
+            "n_train": 2000,
+            "n_test": 500,
+            "seed": 0,
+            "adapter": "experiments/checkpoints/fdllm_cwru_seed0",
+            "elapsed_seconds": 769.1628079414368,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.916,
+            "f1": 0.9154238127256521,
+            "top3_accuracy": null,
+            "n_train": 2000,
+            "n_test": 500,
+            "seed": 1,
+            "adapter": "experiments/checkpoints/fdllm_cwru_seed1",
+            "elapsed_seconds": 809.6705460548401,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.898,
+            "f1": 0.8965459384599506,
+            "top3_accuracy": null,
+            "n_train": 2000,
+            "n_test": 500,
+            "seed": 2,
+            "adapter": "experiments/checkpoints/fdllm_cwru_seed2",
+            "elapsed_seconds": 755.1864013671875,
+            "trainable_parameters": 1703936
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.9066666666666667,
+            "std": 0.00736357401145818,
+            "raw": [
+              0.906,
+              0.916,
+              0.898
+            ]
+          },
+          "f1": {
+            "mean": 0.9052660699427424,
+            "std": 0.007773612582987791,
+            "raw": [
+              0.9038284586426244,
+              0.9154238127256521,
+              0.8965459384599506
+            ]
+          },
+          "top3_accuracy": null
+        }
+      },
+      "t2mfdf": {
+        "per_seed": [
+          {
+            "accuracy": 1.0,
+            "f1": 1.0,
+            "top3_accuracy": 1.0,
+            "n_train": 3464,
+            "n_val": 735,
+            "n_test": 835,
+            "seed": 0
+          },
+          {
+            "accuracy": 1.0,
+            "f1": 1.0,
+            "top3_accuracy": 1.0,
+            "n_train": 3464,
+            "n_val": 735,
+            "n_test": 835,
+            "seed": 1
+          },
+          {
+            "accuracy": 0.9988023952095808,
+            "f1": 0.9985812748402676,
+            "top3_accuracy": 1.0,
+            "n_train": 3464,
+            "n_val": 735,
+            "n_test": 835,
+            "seed": 2
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.9996007984031937,
+            "std": 0.0005645563123246037,
+            "raw": [
+              1.0,
+              1.0,
+              0.9988023952095808
+            ]
+          },
+          "f1": {
+            "mean": 0.9995270916134226,
+            "std": 0.0006687934540578335,
+            "raw": [
+              1.0,
+              1.0,
+              0.9985812748402676
+            ]
+          },
+          "top3_accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "care": {
+      "fdllm": {
+        "per_seed": [
+          {
+            "accuracy": 0.54,
+            "f1": 0.537037037037037,
+            "top3_accuracy": null,
+            "n_train": 400,
+            "n_test": 100,
+            "seed": 0,
+            "adapter": "experiments/checkpoints/fdllm_care_seed0",
+            "elapsed_seconds": 180.4025480747223,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.5,
+            "f1": 0.4981934965877158,
+            "top3_accuracy": null,
+            "n_train": 400,
+            "n_test": 100,
+            "seed": 1,
+            "adapter": "experiments/checkpoints/fdllm_care_seed1",
+            "elapsed_seconds": 155.17266464233398,
+            "trainable_parameters": 1703936
+          },
+          {
+            "accuracy": 0.48,
+            "f1": 0.4357638888888889,
+            "top3_accuracy": null,
+            "n_train": 400,
+            "n_test": 100,
+            "seed": 2,
+            "adapter": "experiments/checkpoints/fdllm_care_seed2",
+            "elapsed_seconds": 168.59295320510864,
+            "trainable_parameters": 1703936
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.5066666666666667,
+            "std": 0.024944382578492966,
+            "raw": [
+              0.54,
+              0.5,
+              0.48
+            ]
+          },
+          "f1": {
+            "mean": 0.49033147417121387,
+            "std": 0.04171667277654001,
+            "raw": [
+              0.537037037037037,
+              0.4981934965877158,
+              0.4357638888888889
+            ]
+          },
+          "top3_accuracy": null
+        }
+      },
+      "t2mfdf": {
+        "per_seed": [
+          {
+            "accuracy": 0.55,
+            "f1": 0.53125,
+            "top3_accuracy": 1.0,
+            "n_train": 1000,
+            "n_val": 200,
+            "n_test": 400,
+            "seed": 0
+          },
+          {
+            "accuracy": 0.57,
+            "f1": 0.5681755416635283,
+            "top3_accuracy": 1.0,
+            "n_train": 1000,
+            "n_val": 200,
+            "n_test": 400,
+            "seed": 1
+          },
+          {
+            "accuracy": 0.6075,
+            "f1": 0.6015203142151917,
+            "top3_accuracy": 1.0,
+            "n_train": 1000,
+            "n_val": 200,
+            "n_test": 400,
+            "seed": 2
+          }
+        ],
+        "summary": {
+          "accuracy": {
+            "mean": 0.5758333333333333,
+            "std": 0.023833916076791823,
+            "raw": [
+              0.55,
+              0.57,
+              0.6075
+            ]
+          },
+          "f1": {
+            "mean": 0.5669819519595733,
+            "std": 0.028700148167579015,
+            "raw": [
+              0.53125,
+              0.5681755416635283,
+              0.6015203142151917
+            ]
+          },
+          "top3_accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

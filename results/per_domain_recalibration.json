@@ -1,0 +1,163 @@
+{
+  "provenance": "results/regression_crossdomain.json per_cycle, in_domain rows (baseline = global PQ-tuned operating point, updated = that domain's own MOPSO re-tuning on its validation split)",
+  "paper_section": "sec:main_results",
+  "caveat": "evaluated on each domain's regression suite, which oversamples escalated and disagreement episodes; absolute rates are not comparable to tab:main, the paired baseline-vs-updated contrast is",
+  "values": {
+    "pq16": {
+      "n_cycles": 5,
+      "n_episodes": 112,
+      "retuned_params": {
+        "alpha_p": 0.7119718565990473,
+        "alpha_d": 0.1,
+        "delta": 0.2,
+        "lambda_r": 0.1,
+        "M": 3,
+        "beta": 0.1
+      },
+      "proceed_rate": {
+        "global_operating_point": 0.3804,
+        "re_tuned": 0.0446,
+        "delta": -0.3357
+      },
+      "hallucination_rate": {
+        "global_operating_point": 0.1518,
+        "re_tuned": 0.0214,
+        "delta": -0.1304
+      },
+      "action_accuracy": {
+        "global_operating_point": 0.3429,
+        "re_tuned": 0.4714,
+        "delta": 0.1286
+      },
+      "false_escalation_rate": {
+        "global_operating_point": 0.1268,
+        "re_tuned": 0.1875,
+        "delta": 0.0607
+      },
+      "escalation_rate": {
+        "global_operating_point": 0.55,
+        "re_tuned": 0.9554,
+        "delta": 0.4054
+      },
+      "defer_rate": {
+        "global_operating_point": 0.0696,
+        "re_tuned": 0.0,
+        "delta": -0.0696
+      },
+      "accuracy": {
+        "global_operating_point": 0.9339,
+        "re_tuned": 0.9339,
+        "delta": 0.0
+      },
+      "f1": {
+        "global_operating_point": 0.9317,
+        "re_tuned": 0.9317,
+        "delta": 0.0
+      }
+    },
+    "cwru": {
+      "n_cycles": 5,
+      "n_episodes": 120,
+      "retuned_params": {
+        "alpha_p": 0.5,
+        "alpha_d": 0.22548520993785445,
+        "delta": 0.12133167347375827,
+        "lambda_r": 0.7,
+        "M": 9,
+        "beta": 0.001
+      },
+      "proceed_rate": {
+        "global_operating_point": 0.0267,
+        "re_tuned": 0.0067,
+        "delta": -0.02
+      },
+      "hallucination_rate": {
+        "global_operating_point": 0.0117,
+        "re_tuned": 0.0,
+        "delta": -0.0117
+      },
+      "action_accuracy": {
+        "global_operating_point": 0.305,
+        "re_tuned": 0.3017,
+        "delta": -0.0033
+      },
+      "false_escalation_rate": {
+        "global_operating_point": 0.395,
+        "re_tuned": 0.3417,
+        "delta": -0.0533
+      },
+      "escalation_rate": {
+        "global_operating_point": 0.9467,
+        "re_tuned": 0.8933,
+        "delta": -0.0533
+      },
+      "defer_rate": {
+        "global_operating_point": 0.0267,
+        "re_tuned": 0.1,
+        "delta": 0.0733
+      },
+      "accuracy": {
+        "global_operating_point": 0.9983,
+        "re_tuned": 0.9983,
+        "delta": 0.0
+      },
+      "f1": {
+        "global_operating_point": 0.9983,
+        "re_tuned": 0.9983,
+        "delta": 0.0
+      }
+    },
+    "care": {
+      "n_cycles": 5,
+      "n_episodes": 120,
+      "retuned_params": {
+        "alpha_p": 0.5,
+        "alpha_d": 0.1,
+        "delta": 0.11410551120929593,
+        "lambda_r": 0.2728141661665128,
+        "M": 7,
+        "beta": 0.08145791799640928
+      },
+      "proceed_rate": {
+        "global_operating_point": 0.1367,
+        "re_tuned": 0.1383,
+        "delta": 0.0017
+      },
+      "hallucination_rate": {
+        "global_operating_point": 0.0817,
+        "re_tuned": 0.0833,
+        "delta": 0.0017
+      },
+      "action_accuracy": {
+        "global_operating_point": 0.1417,
+        "re_tuned": 0.0383,
+        "delta": -0.1033
+      },
+      "false_escalation_rate": {
+        "global_operating_point": 0.3233,
+        "re_tuned": 0.4267,
+        "delta": 0.1033
+      },
+      "escalation_rate": {
+        "global_operating_point": 0.6467,
+        "re_tuned": 0.8617,
+        "delta": 0.215
+      },
+      "defer_rate": {
+        "global_operating_point": 0.2167,
+        "re_tuned": 0.0,
+        "delta": -0.2167
+      },
+      "accuracy": {
+        "global_operating_point": 0.44,
+        "re_tuned": 0.4417,
+        "delta": 0.0017
+      },
+      "f1": {
+        "global_operating_point": 0.4282,
+        "re_tuned": 0.4303,
+        "delta": 0.0021
+      }
+    }
+  }
+}

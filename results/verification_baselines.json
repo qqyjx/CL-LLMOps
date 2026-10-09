@@ -1,0 +1,2143 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-23T05:27:21",
+    "reviewer_items": [
+      "R3.2b",
+      "R3.3a",
+      "R4.3"
+    ],
+    "datasets": [
+      "pq16",
+      "cwru",
+      "care"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "calibration_split": "validation only",
+    "calibrated_gate_operating_point": "validation proceed/reject coverage matched to native FIS",
+    "evaluation_judge": "independent deterministic rule judge"
+  },
+  "datasets": {
+    "pq16": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.5078200882118853,
+              "proceed_threshold": 0.5083279075845375,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.5075,
+                "reference_proceed_rate": 0.3825,
+                "reference_reject_rate": 0.5325,
+                "calibration_brier": 0.24994289100395817
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.5273972602739727,
+              "proceed_threshold": 0.5273972602739727,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.5075,
+                "reference_proceed_rate": 0.3825,
+                "reference_reject_rate": 0.5325,
+                "calibration_brier": 0.2415291813716472
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.1375,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.125,
+              "action_accuracy": 0.29375,
+              "false_escalation_rate": 0.13125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5375,
+              "proceed_rate": 0.40625,
+              "defer_rate": 0.05625,
+              "n_episodes": 160,
+              "avg_time_ms": 7374.145731329918,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.125,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.1125,
+              "action_accuracy": 0.2375,
+              "false_escalation_rate": 0.11875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.55,
+              "proceed_rate": 0.35,
+              "defer_rate": 0.1,
+              "n_episodes": 160,
+              "avg_time_ms": 7374.145731329918,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.2625,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.2125,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.04375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.20625,
+              "proceed_rate": 0.79375,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 7374.145731329918,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.45625,
+              "hypothesis_hallucination_rate": 0.45625,
+              "contradiction_rate": 0.35625,
+              "action_accuracy": 0.3625,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.05,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9764.050325751305
+            },
+            "nli_verifier": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.31875,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.4375,
+              "false_escalation_rate": 0.1875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6149.672268331051
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.5038518981830957,
+              "proceed_threshold": 0.5061634387383892,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.505,
+                "reference_proceed_rate": 0.4225,
+                "reference_reject_rate": 0.525,
+                "calibration_brier": 0.24989489390400485
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.522857142857143,
+              "proceed_threshold": 0.522857142857143,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.505,
+                "reference_proceed_rate": 0.4225,
+                "reference_reject_rate": 0.525,
+                "calibration_brier": 0.24119761904761908
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.18125,
+              "hypothesis_hallucination_rate": 0.35625,
+              "contradiction_rate": 0.15,
+              "action_accuracy": 0.275,
+              "false_escalation_rate": 0.13125,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5125,
+              "proceed_rate": 0.45,
+              "defer_rate": 0.0375,
+              "n_episodes": 160,
+              "avg_time_ms": 7722.36543148756,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.1375,
+              "hypothesis_hallucination_rate": 0.35625,
+              "contradiction_rate": 0.1,
+              "action_accuracy": 0.49375,
+              "false_escalation_rate": 0.0875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.5625,
+              "proceed_rate": 0.4125,
+              "defer_rate": 0.025,
+              "n_episodes": 160,
+              "avg_time_ms": 7722.36543148756,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.3125,
+              "hypothesis_hallucination_rate": 0.35625,
+              "contradiction_rate": 0.2625,
+              "action_accuracy": 0.325,
+              "false_escalation_rate": 0.025,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.09375,
+              "proceed_rate": 0.90625,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 7722.36543148756,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.38125,
+              "hypothesis_hallucination_rate": 0.38125,
+              "contradiction_rate": 0.2875,
+              "action_accuracy": 0.34375,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.0625,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9814.65761512518
+            },
+            "nli_verifier": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.36875,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.4375,
+              "false_escalation_rate": 0.1875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 5390.65742790699
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.5531879435686651,
+              "proceed_threshold": 0.5684997167794853,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.5175,
+                "reference_proceed_rate": 0.4,
+                "reference_reject_rate": 0.54,
+                "calibration_brier": 0.24301400266378365
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.5488721804511278,
+              "proceed_threshold": 0.5488721804511278,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.5175,
+                "reference_proceed_rate": 0.4,
+                "reference_reject_rate": 0.54,
+                "calibration_brier": 0.23398530998784978
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.16875,
+              "hypothesis_hallucination_rate": 0.41875,
+              "contradiction_rate": 0.1625,
+              "action_accuracy": 0.29375,
+              "false_escalation_rate": 0.1375,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.51875,
+              "proceed_rate": 0.4125,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7531.604918837547,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.2,
+              "hypothesis_hallucination_rate": 0.41875,
+              "contradiction_rate": 0.19375,
+              "action_accuracy": 0.28125,
+              "false_escalation_rate": 0.1,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.49375,
+              "proceed_rate": 0.4375,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7531.604918837547,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.25625,
+              "hypothesis_hallucination_rate": 0.41875,
+              "contradiction_rate": 0.2375,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.1,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.36875,
+              "proceed_rate": 0.63125,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 7531.604918837547,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.4375,
+              "hypothesis_hallucination_rate": 0.4375,
+              "contradiction_rate": 0.4,
+              "action_accuracy": 0.30625,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.0375,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9781.762580573559
+            },
+            "nli_verifier": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.3875,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.4375,
+              "false_escalation_rate": 0.1875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 5764.227083325386
+            }
+          }
+        }
+      ],
+      "summary": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.1625,
+            "std": 0.018399501804849675,
+            "raw": [
+              0.1375,
+              0.18125,
+              0.16875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.28750000000000003,
+            "std": 0.008838834764831839,
+            "raw": [
+              0.29375,
+              0.275,
+              0.29375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.13333333333333333,
+            "std": 0.0029462782549439506,
+            "raw": [
+              0.13125,
+              0.13125,
+              0.1375
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.4229166666666666,
+            "std": 0.019320038532282726,
+            "raw": [
+              0.40625,
+              0.45,
+              0.4125
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.05416666666666667,
+            "std": 0.012842529172852037,
+            "raw": [
+              0.05625,
+              0.0375,
+              0.06875
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5229166666666666,
+            "std": 0.010622957319984968,
+            "raw": [
+              0.5375,
+              0.5125,
+              0.51875
+            ]
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.15416666666666667,
+            "std": 0.03280836614171588,
+            "raw": [
+              0.125,
+              0.1375,
+              0.2
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.33749999999999997,
+            "std": 0.1119198001546941,
+            "raw": [
+              0.2375,
+              0.49375,
+              0.28125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.10208333333333335,
+            "std": 0.012842529172852033,
+            "raw": [
+              0.11875,
+              0.0875,
+              0.1
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.39999999999999997,
+            "std": 0.03679900360969937,
+            "raw": [
+              0.35,
+              0.4125,
+              0.4375
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.06458333333333334,
+            "std": 0.03076004804215292,
+            "raw": [
+              0.1,
+              0.025,
+              0.06875
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5354166666666668,
+            "std": 0.029901458530015253,
+            "raw": [
+              0.55,
+              0.5625,
+              0.49375
+            ]
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.2770833333333333,
+            "std": 0.025173012444988697,
+            "raw": [
+              0.2625,
+              0.3125,
+              0.25625
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.31875000000000003,
+            "std": 0.005103103630798292,
+            "raw": [
+              0.31875,
+              0.325,
+              0.3125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.05625,
+            "std": 0.03186887195995491,
+            "raw": [
+              0.04375,
+              0.025,
+              0.1
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.7770833333333332,
+            "std": 0.11288514320120056,
+            "raw": [
+              0.79375,
+              0.90625,
+              0.63125
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.22291666666666665,
+            "std": 0.11288514320120056,
+            "raw": [
+              0.20625,
+              0.09375,
+              0.36875
+            ]
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.425,
+            "std": 0.03186887195995491,
+            "raw": [
+              0.45625,
+              0.38125,
+              0.4375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3375000000000001,
+            "std": 0.023385358667337118,
+            "raw": [
+              0.3625,
+              0.34375,
+              0.30625
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.4375,
+            "std": 0.0,
+            "raw": [
+              0.4375,
+              0.4375,
+              0.4375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.1875,
+            "std": 0.0,
+            "raw": [
+              0.1875,
+              0.1875,
+              0.1875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "cwru": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.7745973023000523,
+              "proceed_threshold": 0.7753855708420824,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.73,
+                "reference_proceed_rate": 0.0725,
+                "reference_reject_rate": 0.9125,
+                "calibration_brier": 0.19590278654466942
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.7333333333333333,
+              "proceed_threshold": 0.7333333333333333,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.73,
+                "reference_proceed_rate": 0.0725,
+                "reference_reject_rate": 0.9125,
+                "calibration_brier": 0.19579310344827586
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.3125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.3375,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.90625,
+              "proceed_rate": 0.0625,
+              "defer_rate": 0.03125,
+              "n_episodes": 160,
+              "avg_time_ms": 6075.006173551083,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.00625,
+              "hypothesis_hallucination_rate": 0.3125,
+              "contradiction_rate": 0.00625,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.35,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.93125,
+              "proceed_rate": 0.05,
+              "defer_rate": 0.01875,
+              "n_episodes": 160,
+              "avg_time_ms": 6075.006173551083,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.0375,
+              "hypothesis_hallucination_rate": 0.3125,
+              "contradiction_rate": 0.0375,
+              "action_accuracy": 0.30625,
+              "false_escalation_rate": 0.39375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.88125,
+              "proceed_rate": 0.11875,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6075.006173551083,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.275,
+              "hypothesis_hallucination_rate": 0.275,
+              "contradiction_rate": 0.21875,
+              "action_accuracy": 0.43125,
+              "false_escalation_rate": 0.00625,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.00625,
+              "proceed_rate": 0.99375,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9577.985361218452
+            },
+            "nli_verifier": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.225,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6121.93219512701
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.7696642643546222,
+              "proceed_threshold": 0.7704136676400872,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.7525,
+                "reference_proceed_rate": 0.0175,
+                "reference_reject_rate": 0.95,
+                "calibration_brier": 0.18608670900669758
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.8043478260869565,
+              "proceed_threshold": 0.8043478260869565,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.7525,
+                "reference_proceed_rate": 0.0175,
+                "reference_reject_rate": 0.95,
+                "calibration_brier": 0.18459650856389984
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.01875,
+              "hypothesis_hallucination_rate": 0.25625,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.30625,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.91875,
+              "proceed_rate": 0.05625,
+              "defer_rate": 0.025,
+              "n_episodes": 160,
+              "avg_time_ms": 6030.212518572807,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.00625,
+              "hypothesis_hallucination_rate": 0.25625,
+              "contradiction_rate": 0.00625,
+              "action_accuracy": 0.2375,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.925,
+              "proceed_rate": 0.0125,
+              "defer_rate": 0.0625,
+              "n_episodes": 160,
+              "avg_time_ms": 6030.212518572807,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.075,
+              "hypothesis_hallucination_rate": 0.25625,
+              "contradiction_rate": 0.06875,
+              "action_accuracy": 0.35,
+              "false_escalation_rate": 0.29375,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.625,
+              "proceed_rate": 0.375,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6030.212518572807,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.25625,
+              "hypothesis_hallucination_rate": 0.2625,
+              "contradiction_rate": 0.23125,
+              "action_accuracy": 0.4125,
+              "false_escalation_rate": 0.0125,
+              "overconfident_error_rate": 0.01875,
+              "escalation_rate": 0.0125,
+              "proceed_rate": 0.9875,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9532.462348043919
+            },
+            "nli_verifier": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.25,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6110.544084012508
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.7858587923364592,
+              "proceed_threshold": 0.7863816134810873,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.7575,
+                "reference_proceed_rate": 0.02,
+                "reference_reject_rate": 0.9575,
+                "calibration_brier": 0.18322401152172127
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.7967032967032966,
+              "proceed_threshold": 0.7967032967032966,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.7575,
+                "reference_proceed_rate": 0.02,
+                "reference_reject_rate": 0.9575,
+                "calibration_brier": 0.18036549104246064
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.01875,
+              "hypothesis_hallucination_rate": 0.2625,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.94375,
+              "proceed_rate": 0.0375,
+              "defer_rate": 0.01875,
+              "n_episodes": 160,
+              "avg_time_ms": 5916.164600849152,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.2625,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.26875,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.94375,
+              "proceed_rate": 0.025,
+              "defer_rate": 0.03125,
+              "n_episodes": 160,
+              "avg_time_ms": 5916.164600849152,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.1375,
+              "hypothesis_hallucination_rate": 0.2625,
+              "contradiction_rate": 0.1,
+              "action_accuracy": 0.35,
+              "false_escalation_rate": 0.2625,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.50625,
+              "proceed_rate": 0.49375,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 5916.164600849152,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.25625,
+              "hypothesis_hallucination_rate": 0.2625,
+              "contradiction_rate": 0.21875,
+              "action_accuracy": 0.425,
+              "false_escalation_rate": 0.00625,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.0125,
+              "proceed_rate": 0.9875,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 9676.186986267567
+            },
+            "nli_verifier": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.25,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 5981.464587152004
+            }
+          }
+        }
+      ],
+      "summary": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.020833333333333332,
+            "std": 0.002946278254943949,
+            "raw": [
+              0.025,
+              0.01875,
+              0.01875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.325,
+            "std": 0.013501543121683038,
+            "raw": [
+              0.3375,
+              0.30625,
+              0.33125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.0,
+            "raw": [
+              0.3875,
+              0.3875,
+              0.3875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.052083333333333336,
+            "std": 0.01062295731998497,
+            "raw": [
+              0.0625,
+              0.05625,
+              0.0375
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.024999999999999998,
+            "std": 0.005103103630798288,
+            "raw": [
+              0.03125,
+              0.025,
+              0.01875
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9229166666666666,
+            "std": 0.015590239111558084,
+            "raw": [
+              0.90625,
+              0.91875,
+              0.94375
+            ]
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.008333333333333333,
+            "std": 0.0029462782549439484,
+            "raw": [
+              0.00625,
+              0.00625,
+              0.0125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.26875,
+            "std": 0.02551551815399144,
+            "raw": [
+              0.3,
+              0.2375,
+              0.26875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3833333333333333,
+            "std": 0.023570226039551608,
+            "raw": [
+              0.35,
+              0.4,
+              0.4
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.029166666666666664,
+            "std": 0.015590239111558091,
+            "raw": [
+              0.05,
+              0.0125,
+              0.025
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0375,
+            "std": 0.018399501804849682,
+            "raw": [
+              0.01875,
+              0.0625,
+              0.03125
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9333333333333335,
+            "std": 0.007795119555779017,
+            "raw": [
+              0.93125,
+              0.925,
+              0.94375
+            ]
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.08333333333333333,
+            "std": 0.04124789556921528,
+            "raw": [
+              0.0375,
+              0.075,
+              0.1375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3354166666666667,
+            "std": 0.020623947784607615,
+            "raw": [
+              0.30625,
+              0.35,
+              0.35
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.31666666666666665,
+            "std": 0.055979286843935,
+            "raw": [
+              0.39375,
+              0.29375,
+              0.2625
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.32916666666666666,
+            "std": 0.15648593298511604,
+            "raw": [
+              0.11875,
+              0.375,
+              0.49375
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.6708333333333334,
+            "std": 0.156485932985116,
+            "raw": [
+              0.88125,
+              0.625,
+              0.50625
+            ]
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.2625,
+            "std": 0.008838834764831865,
+            "raw": [
+              0.275,
+              0.25625,
+              0.25625
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.42291666666666666,
+            "std": 0.007795119555779061,
+            "raw": [
+              0.43125,
+              0.4125,
+              0.425
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.008333333333333333,
+            "std": 0.002946278254943948,
+            "raw": [
+              0.00625,
+              0.0125,
+              0.00625
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.9895833333333334,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.99375,
+              0.9875,
+              0.9875
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.010416666666666666,
+            "std": 0.002946278254943948,
+            "raw": [
+              0.00625,
+              0.0125,
+              0.0125
+            ]
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3,
+            "std": 0.0,
+            "raw": [
+              0.3,
+              0.3,
+              0.3
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.4000000000000001,
+            "std": 5.551115123125783e-17,
+            "raw": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "care": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.2705904866271037,
+              "proceed_threshold": 0.2836324940255505,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2525,
+                "reference_proceed_rate": 0.1575,
+                "reference_reject_rate": 0.63,
+                "calibration_brier": 0.18824114442459938
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.31203007518796994,
+              "proceed_threshold": 0.31203007518796994,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2525,
+                "reference_proceed_rate": 0.1575,
+                "reference_reject_rate": 0.63,
+                "calibration_brier": 0.17978920001152307
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.59375,
+              "f1": 0.5933528836754643,
+              "hallucination_rate": 0.09375,
+              "hypothesis_hallucination_rate": 0.4875,
+              "contradiction_rate": 0.05,
+              "action_accuracy": 0.1375,
+              "false_escalation_rate": 0.3375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.5625,
+              "proceed_rate": 0.15625,
+              "defer_rate": 0.28125,
+              "n_episodes": 160,
+              "avg_time_ms": 6295.732279121876,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.6,
+              "f1": 0.5994367078704428,
+              "hallucination_rate": 0.1,
+              "hypothesis_hallucination_rate": 0.4875,
+              "contradiction_rate": 0.05,
+              "action_accuracy": 0.15625,
+              "false_escalation_rate": 0.30625,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.625,
+              "proceed_rate": 0.18125,
+              "defer_rate": 0.19375,
+              "n_episodes": 160,
+              "avg_time_ms": 6295.732279121876,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.6,
+              "f1": 0.5999374902328489,
+              "hallucination_rate": 0.25,
+              "hypothesis_hallucination_rate": 0.4875,
+              "contradiction_rate": 0.16875,
+              "action_accuracy": 0.28125,
+              "false_escalation_rate": 0.1625,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.40625,
+              "proceed_rate": 0.59375,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6295.732279121876,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.61875,
+              "f1": 0.6183773216031281,
+              "hallucination_rate": 0.53125,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.31875,
+              "action_accuracy": 0.48125,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.38125,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 8639.310950040817
+            },
+            "nli_verifier": {
+              "accuracy": 0.6,
+              "f1": 0.5989974937343359,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.49375,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.0,
+              "false_escalation_rate": 0.5,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6056.464903056622
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.28888107416763276,
+              "proceed_threshold": 0.2903883687819134,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2475,
+                "reference_proceed_rate": 0.15,
+                "reference_reject_rate": 0.665,
+                "calibration_brier": 0.1822975491954842
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.250632911392405,
+              "proceed_threshold": 0.250632911392405,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2475,
+                "reference_proceed_rate": 0.15,
+                "reference_reject_rate": 0.665,
+                "calibration_brier": 0.1854683544303797
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.5875,
+              "f1": 0.5864661654135338,
+              "hallucination_rate": 0.15625,
+              "hypothesis_hallucination_rate": 0.54375,
+              "contradiction_rate": 0.09375,
+              "action_accuracy": 0.1125,
+              "false_escalation_rate": 0.34375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.59375,
+              "proceed_rate": 0.1875,
+              "defer_rate": 0.21875,
+              "n_episodes": 160,
+              "avg_time_ms": 6616.819132864475,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.59375,
+              "f1": 0.5918207150987087,
+              "hallucination_rate": 0.0625,
+              "hypothesis_hallucination_rate": 0.54375,
+              "contradiction_rate": 0.04375,
+              "action_accuracy": 0.19375,
+              "false_escalation_rate": 0.3,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.675,
+              "proceed_rate": 0.18125,
+              "defer_rate": 0.14375,
+              "n_episodes": 160,
+              "avg_time_ms": 6616.819132864475,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.6,
+              "f1": 0.6,
+              "hallucination_rate": 0.53125,
+              "hypothesis_hallucination_rate": 0.54375,
+              "contradiction_rate": 0.4,
+              "action_accuracy": 0.45625,
+              "false_escalation_rate": 0.0125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.01875,
+              "proceed_rate": 0.98125,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6616.819132864475,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.6,
+              "f1": 0.5999374902328489,
+              "hallucination_rate": 0.44375,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.26875,
+              "action_accuracy": 0.45,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.4,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 8642.786227166653
+            },
+            "nli_verifier": {
+              "accuracy": 0.59375,
+              "f1": 0.5918207150987087,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.0,
+              "false_escalation_rate": 0.5,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 5872.63523042202
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "calibration": {
+            "n": 400,
+            "platt": {
+              "method": "platt",
+              "reject_threshold": 0.27276730827532714,
+              "proceed_threshold": 0.2728926308189972,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2675,
+                "reference_proceed_rate": 0.1225,
+                "reference_reject_rate": 0.665,
+                "calibration_brier": 0.19587439214334837
+              }
+            },
+            "isotonic": {
+              "method": "isotonic",
+              "reject_threshold": 0.2619047619047619,
+              "proceed_threshold": 0.2619047619047619,
+              "fit": {
+                "n_validation": 400,
+                "positive_rate": 0.2675,
+                "reference_proceed_rate": 0.1225,
+                "reference_reject_rate": 0.665,
+                "calibration_brier": 0.1940422077922078
+              }
+            }
+          },
+          "metrics": {
+            "cl_llmops": {
+              "accuracy": 0.59375,
+              "f1": 0.5918207150987087,
+              "hallucination_rate": 0.0875,
+              "hypothesis_hallucination_rate": 0.4625,
+              "contradiction_rate": 0.075,
+              "action_accuracy": 0.24375,
+              "false_escalation_rate": 0.28125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.48125,
+              "proceed_rate": 0.16875,
+              "defer_rate": 0.35,
+              "n_episodes": 160,
+              "avg_time_ms": 4900.004552304745,
+              "paired_shared_generations": true
+            },
+            "calibrated_platt": {
+              "accuracy": 0.575,
+              "f1": 0.5739348370927319,
+              "hallucination_rate": 0.0375,
+              "hypothesis_hallucination_rate": 0.4625,
+              "contradiction_rate": 0.0375,
+              "action_accuracy": 0.0875,
+              "false_escalation_rate": 0.4125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.81875,
+              "proceed_rate": 0.08125,
+              "defer_rate": 0.1,
+              "n_episodes": 160,
+              "avg_time_ms": 4900.004552304745,
+              "paired_shared_generations": true
+            },
+            "calibrated_isotonic": {
+              "accuracy": 0.58125,
+              "f1": 0.5775369458128079,
+              "hallucination_rate": 0.44375,
+              "hypothesis_hallucination_rate": 0.4625,
+              "contradiction_rate": 0.325,
+              "action_accuracy": 0.475,
+              "false_escalation_rate": 0.0125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.03125,
+              "proceed_rate": 0.96875,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 4900.004552304745,
+              "paired_shared_generations": true
+            },
+            "guardrail": {
+              "accuracy": 0.5875,
+              "f1": 0.5833333333333333,
+              "hallucination_rate": 0.50625,
+              "hypothesis_hallucination_rate": 0.50625,
+              "contradiction_rate": 0.35,
+              "action_accuracy": 0.45625,
+              "false_escalation_rate": 0.0,
+              "overconfident_error_rate": 0.4125,
+              "escalation_rate": 0.0,
+              "proceed_rate": 1.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6717.762891948223
+            },
+            "nli_verifier": {
+              "accuracy": 0.575,
+              "f1": 0.5739348370927319,
+              "hallucination_rate": 0.0,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.0,
+              "action_accuracy": 0.0,
+              "false_escalation_rate": 0.5,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 1.0,
+              "proceed_rate": 0.0,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 4392.944858968258
+            }
+          }
+        }
+      ],
+      "summary": {
+        "cl_llmops": {
+          "accuracy": {
+            "mean": 0.5916666666666667,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.59375,
+              0.5875,
+              0.59375
+            ]
+          },
+          "f1": {
+            "mean": 0.590546588062569,
+            "std": 0.002952317946175922,
+            "raw": [
+              0.5933528836754643,
+              0.5864661654135338,
+              0.5918207150987087
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.1125,
+            "std": 0.031040967553648626,
+            "raw": [
+              0.09375,
+              0.15625,
+              0.0875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.16458333333333333,
+            "std": 0.05690208451561526,
+            "raw": [
+              0.1375,
+              0.1125,
+              0.24375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.32083333333333336,
+            "std": 0.028105703256733425,
+            "raw": [
+              0.3375,
+              0.34375,
+              0.28125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.1708333333333333,
+            "std": 0.012842529172852033,
+            "raw": [
+              0.15625,
+              0.1875,
+              0.16875
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.2833333333333333,
+            "std": 0.053602834709452526,
+            "raw": [
+              0.28125,
+              0.21875,
+              0.35
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5458333333333333,
+            "std": 0.04741586115308767,
+            "raw": [
+              0.5625,
+              0.59375,
+              0.48125
+            ]
+          }
+        },
+        "calibrated_platt": {
+          "accuracy": {
+            "mean": 0.5895833333333333,
+            "std": 0.010622957319984982,
+            "raw": [
+              0.6,
+              0.59375,
+              0.575
+            ]
+          },
+          "f1": {
+            "mean": 0.5883974200206278,
+            "std": 0.010688796788677901,
+            "raw": [
+              0.5994367078704428,
+              0.5918207150987087,
+              0.5739348370927319
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.06666666666666667,
+            "std": 0.025685058345704073,
+            "raw": [
+              0.1,
+              0.0625,
+              0.0375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.14583333333333334,
+            "std": 0.04399731683738099,
+            "raw": [
+              0.15625,
+              0.19375,
+              0.0875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3395833333333333,
+            "std": 0.051622965389016104,
+            "raw": [
+              0.30625,
+              0.3,
+              0.4125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.14791666666666667,
+            "std": 0.04714045207910317,
+            "raw": [
+              0.18125,
+              0.18125,
+              0.08125
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.14583333333333334,
+            "std": 0.03830161731427133,
+            "raw": [
+              0.19375,
+              0.14375,
+              0.1
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.7062499999999999,
+            "std": 0.08212668060177925,
+            "raw": [
+              0.625,
+              0.675,
+              0.81875
+            ]
+          }
+        },
+        "calibrated_isotonic": {
+          "accuracy": {
+            "mean": 0.59375,
+            "std": 0.008838834764831813,
+            "raw": [
+              0.6,
+              0.6,
+              0.58125
+            ]
+          },
+          "f1": {
+            "mean": 0.5924914786818856,
+            "std": 0.010574482394487569,
+            "raw": [
+              0.5999374902328489,
+              0.6,
+              0.5775369458128079
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.4083333333333334,
+            "std": 0.11751920646808713,
+            "raw": [
+              0.25,
+              0.53125,
+              0.44375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.4041666666666666,
+            "std": 0.08725163163071635,
+            "raw": [
+              0.28125,
+              0.45625,
+              0.475
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.06250000000000001,
+            "std": 0.07071067811865477,
+            "raw": [
+              0.1625,
+              0.0125,
+              0.0125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.8479166666666668,
+            "std": 0.17979540841992847,
+            "raw": [
+              0.59375,
+              0.98125,
+              0.96875
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.15208333333333332,
+            "std": 0.17979540841992847,
+            "raw": [
+              0.40625,
+              0.01875,
+              0.03125
+            ]
+          }
+        },
+        "guardrail": {
+          "accuracy": {
+            "mean": 0.6020833333333333,
+            "std": 0.012842529172852037,
+            "raw": [
+              0.61875,
+              0.6,
+              0.5875
+            ]
+          },
+          "f1": {
+            "mean": 0.6005493817231035,
+            "std": 0.014313189415367066,
+            "raw": [
+              0.6183773216031281,
+              0.5999374902328489,
+              0.5833333333333333
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.49374999999999997,
+            "std": 0.03679900360969937,
+            "raw": [
+              0.53125,
+              0.44375,
+              0.50625
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.46249999999999997,
+            "std": 0.013501543121683045,
+            "raw": [
+              0.48125,
+              0.45,
+              0.45625
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "proceed_rate": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "nli_verifier": {
+          "accuracy": {
+            "mean": 0.5895833333333333,
+            "std": 0.010622957319984982,
+            "raw": [
+              0.6,
+              0.59375,
+              0.575
+            ]
+          },
+          "f1": {
+            "mean": 0.5882510153085921,
+            "std": 0.010538540598754746,
+            "raw": [
+              0.5989974937343359,
+              0.5918207150987087,
+              0.5739348370927319
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.5,
+            "std": 0.0,
+            "raw": [
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "raw": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 1.0,
+            "std": 0.0,
+            "raw": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1981 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-23T10:39:06",
+    "reviewer_item": "R3.3c",
+    "protocol": "shared test generations; simultaneous shifts of the six score/coverage breakpoints",
+    "datasets": [
+      "pq16",
+      "cwru",
+      "care"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "shifts": [
+      -0.1,
+      -0.05,
+      0.0,
+      0.05,
+      0.1
+    ]
+  },
+  "partition_diagnostics": {
+    "shift_-0.10": {
+      "mean_abs_sum_minus_one": 0.04995004995004995,
+      "max_abs_sum_minus_one": 0.20000000000000018,
+      "ambiguity_fraction_sum_gt_one": 0.0,
+      "gap_fraction_sum_lt_one": 0.4975024975024975
+    },
+    "shift_-0.05": {
+      "mean_abs_sum_minus_one": 0.04995004995004991,
+      "max_abs_sum_minus_one": 0.19999999999999996,
+      "ambiguity_fraction_sum_gt_one": 0.0,
+      "gap_fraction_sum_lt_one": 0.4975024975024975
+    },
+    "shift_+0.00": {
+      "mean_abs_sum_minus_one": 0.04995004995004994,
+      "max_abs_sum_minus_one": 0.20000000000000018,
+      "ambiguity_fraction_sum_gt_one": 0.0,
+      "gap_fraction_sum_lt_one": 0.4975024975024975
+    },
+    "shift_+0.05": {
+      "mean_abs_sum_minus_one": 0.04995004995004994,
+      "max_abs_sum_minus_one": 0.20000000000000007,
+      "ambiguity_fraction_sum_gt_one": 0.0,
+      "gap_fraction_sum_lt_one": 0.4975024975024975
+    },
+    "shift_+0.10": {
+      "mean_abs_sum_minus_one": 0.049950049950049945,
+      "max_abs_sum_minus_one": 0.20000000000000018,
+      "ambiguity_fraction_sum_gt_one": 0.0,
+      "gap_fraction_sum_lt_one": 0.4975024975024975
+    }
+  },
+  "datasets": {
+    "pq16": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.18125,
+              "hypothesis_hallucination_rate": 0.4125,
+              "contradiction_rate": 0.16875,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5125,
+              "proceed_rate": 0.45,
+              "defer_rate": 0.0375,
+              "n_episodes": 160,
+              "avg_time_ms": 7316.094624996185,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.175,
+              "hypothesis_hallucination_rate": 0.4125,
+              "contradiction_rate": 0.1625,
+              "action_accuracy": 0.29375,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5125,
+              "proceed_rate": 0.44375,
+              "defer_rate": 0.04375,
+              "n_episodes": 160,
+              "avg_time_ms": 7316.094624996185,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.1625,
+              "hypothesis_hallucination_rate": 0.4125,
+              "contradiction_rate": 0.15625,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.53125,
+              "proceed_rate": 0.41875,
+              "defer_rate": 0.05,
+              "n_episodes": 160,
+              "avg_time_ms": 7316.094624996185,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.14375,
+              "hypothesis_hallucination_rate": 0.4125,
+              "contradiction_rate": 0.1375,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.575,
+              "proceed_rate": 0.35625,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7316.094624996185,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.93125,
+              "f1": 0.9259920634920635,
+              "hallucination_rate": 0.11875,
+              "hypothesis_hallucination_rate": 0.4125,
+              "contradiction_rate": 0.1125,
+              "action_accuracy": 0.3375,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.6375,
+              "proceed_rate": 0.2875,
+              "defer_rate": 0.075,
+              "n_episodes": 160,
+              "avg_time_ms": 7316.094624996185,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.2,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.14375,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.11875,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.525,
+              "proceed_rate": 0.41875,
+              "defer_rate": 0.05625,
+              "n_episodes": 160,
+              "avg_time_ms": 7457.426193356514,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.2,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.14375,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.11875,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5125,
+              "proceed_rate": 0.41875,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7457.426193356514,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.1875,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.1375,
+              "action_accuracy": 0.325,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5375,
+              "proceed_rate": 0.38125,
+              "defer_rate": 0.08125,
+              "n_episodes": 160,
+              "avg_time_ms": 7457.426193356514,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.175,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.125,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.54375,
+              "proceed_rate": 0.35625,
+              "defer_rate": 0.1,
+              "n_episodes": 160,
+              "avg_time_ms": 7457.426193356514,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.9125,
+              "f1": 0.9100562723095618,
+              "hallucination_rate": 0.1625,
+              "hypothesis_hallucination_rate": 0.44375,
+              "contradiction_rate": 0.11875,
+              "action_accuracy": 0.3375,
+              "false_escalation_rate": 0.11875,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5875,
+              "proceed_rate": 0.3125,
+              "defer_rate": 0.1,
+              "n_episodes": 160,
+              "avg_time_ms": 7457.426193356514,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.175,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.16875,
+              "action_accuracy": 0.3,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.01875,
+              "escalation_rate": 0.4875,
+              "proceed_rate": 0.46875,
+              "defer_rate": 0.04375,
+              "n_episodes": 160,
+              "avg_time_ms": 7637.741848826408,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.175,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.16875,
+              "action_accuracy": 0.2875,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.01875,
+              "escalation_rate": 0.4875,
+              "proceed_rate": 0.4625,
+              "defer_rate": 0.05,
+              "n_episodes": 160,
+              "avg_time_ms": 7637.741848826408,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.16875,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.1625,
+              "action_accuracy": 0.29375,
+              "false_escalation_rate": 0.1375,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5125,
+              "proceed_rate": 0.425,
+              "defer_rate": 0.0625,
+              "n_episodes": 160,
+              "avg_time_ms": 7637.741848826408,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.14375,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.14375,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.125,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.53125,
+              "proceed_rate": 0.4,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7637.741848826408,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.95625,
+              "f1": 0.9561194653299916,
+              "hallucination_rate": 0.125,
+              "hypothesis_hallucination_rate": 0.40625,
+              "contradiction_rate": 0.11875,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.1375,
+              "overconfident_error_rate": 0.0125,
+              "escalation_rate": 0.5875,
+              "proceed_rate": 0.34375,
+              "defer_rate": 0.06875,
+              "n_episodes": 160,
+              "avg_time_ms": 7637.741848826408,
+              "paired_shared_generations": true
+            }
+          }
+        }
+      ],
+      "summary": {
+        "shift_-0.10": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.18541666666666665,
+            "std": 0.010622957319984977,
+            "raw": [
+              0.18125,
+              0.2,
+              0.175
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.30624999999999997,
+            "std": 0.008838834764831839,
+            "raw": [
+              0.3,
+              0.31875,
+              0.3
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.12291666666666667,
+            "std": 0.002946278254943951,
+            "raw": [
+              0.125,
+              0.11875,
+              0.125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.4458333333333333,
+            "std": 0.020623947784607632,
+            "raw": [
+              0.45,
+              0.41875,
+              0.46875
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.04583333333333334,
+            "std": 0.007795119555779046,
+            "raw": [
+              0.0375,
+              0.05625,
+              0.04375
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5083333333333334,
+            "std": 0.015590239111558098,
+            "raw": [
+              0.5125,
+              0.525,
+              0.4875
+            ]
+          }
+        },
+        "shift_-0.05": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.18333333333333335,
+            "std": 0.011785113019775804,
+            "raw": [
+              0.175,
+              0.2,
+              0.175
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3,
+            "std": 0.013501543121683038,
+            "raw": [
+              0.29375,
+              0.31875,
+              0.2875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.12291666666666667,
+            "std": 0.002946278254943951,
+            "raw": [
+              0.125,
+              0.11875,
+              0.125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.4416666666666667,
+            "std": 0.017921510973005473,
+            "raw": [
+              0.44375,
+              0.41875,
+              0.4625
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.05416666666666667,
+            "std": 0.010622957319984971,
+            "raw": [
+              0.04375,
+              0.06875,
+              0.05
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5041666666666667,
+            "std": 0.011785113019775776,
+            "raw": [
+              0.5125,
+              0.5125,
+              0.4875
+            ]
+          }
+        },
+        "shift_+0.00": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.1729166666666667,
+            "std": 0.010622957319984964,
+            "raw": [
+              0.1625,
+              0.1875,
+              0.16875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.30624999999999997,
+            "std": 0.013501543121683045,
+            "raw": [
+              0.3,
+              0.325,
+              0.29375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.12916666666666668,
+            "std": 0.005892556509887901,
+            "raw": [
+              0.125,
+              0.125,
+              0.1375
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.4083333333333334,
+            "std": 0.019320038532282726,
+            "raw": [
+              0.41875,
+              0.38125,
+              0.425
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.06458333333333334,
+            "std": 0.012842529172852035,
+            "raw": [
+              0.05,
+              0.08125,
+              0.0625
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5270833333333333,
+            "std": 0.010622957319984982,
+            "raw": [
+              0.53125,
+              0.5375,
+              0.5125
+            ]
+          }
+        },
+        "shift_+0.05": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.15416666666666665,
+            "std": 0.01473139127471974,
+            "raw": [
+              0.14375,
+              0.175,
+              0.14375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.31666666666666665,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.3125,
+              0.31875,
+              0.31875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.125,
+            "std": 0.0,
+            "raw": [
+              0.125,
+              0.125,
+              0.125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.37083333333333335,
+            "std": 0.02062394778460764,
+            "raw": [
+              0.35625,
+              0.35625,
+              0.4
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.07916666666666668,
+            "std": 0.01473139127471974,
+            "raw": [
+              0.06875,
+              0.1,
+              0.06875
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5499999999999999,
+            "std": 0.018399501804849665,
+            "raw": [
+              0.575,
+              0.54375,
+              0.53125
+            ]
+          }
+        },
+        "shift_+0.10": {
+          "accuracy": {
+            "mean": 0.9333333333333332,
+            "std": 0.017921510973005497,
+            "raw": [
+              0.93125,
+              0.9125,
+              0.95625
+            ]
+          },
+          "f1": {
+            "mean": 0.9307226003772057,
+            "std": 0.019100400034652177,
+            "raw": [
+              0.9259920634920635,
+              0.9100562723095618,
+              0.9561194653299916
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.13541666666666666,
+            "std": 0.019320038532282723,
+            "raw": [
+              0.11875,
+              0.1625,
+              0.125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3354166666666667,
+            "std": 0.0029462782549439636,
+            "raw": [
+              0.3375,
+              0.3375,
+              0.33125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.12708333333333333,
+            "std": 0.007795119555779052,
+            "raw": [
+              0.125,
+              0.11875,
+              0.1375
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.3145833333333333,
+            "std": 0.0230111687858068,
+            "raw": [
+              0.2875,
+              0.3125,
+              0.34375
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.08125,
+            "std": 0.013501543121683042,
+            "raw": [
+              0.075,
+              0.1,
+              0.06875
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.6041666666666666,
+            "std": 0.023570226039551553,
+            "raw": [
+              0.6375,
+              0.5875,
+              0.5875
+            ]
+          }
+        }
+      },
+      "max_absolute_delta_from_unshifted": {
+        "accuracy": 0.0,
+        "f1": 0.0,
+        "hallucination_rate": 0.03750000000000003,
+        "action_accuracy": 0.02916666666666673,
+        "false_escalation_rate": 0.0062500000000000056,
+        "proceed_rate": 0.09375000000000006,
+        "defer_rate": 0.018750000000000003,
+        "escalation_rate": 0.07708333333333328
+      }
+    },
+    "cwru": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.28125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.3375,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.9125,
+              "proceed_rate": 0.08125,
+              "defer_rate": 0.00625,
+              "n_episodes": 160,
+              "avg_time_ms": 6374.946138262749,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.28125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.39375,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.9125,
+              "proceed_rate": 0.075,
+              "defer_rate": 0.0125,
+              "n_episodes": 160,
+              "avg_time_ms": 6374.946138262749,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.28125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.91875,
+              "proceed_rate": 0.06875,
+              "defer_rate": 0.0125,
+              "n_episodes": 160,
+              "avg_time_ms": 6374.946138262749,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.28125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.9125,
+              "proceed_rate": 0.06875,
+              "defer_rate": 0.01875,
+              "n_episodes": 160,
+              "avg_time_ms": 6374.946138262749,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.99375,
+              "f1": 0.9937438905180841,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.28125,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.3375,
+              "false_escalation_rate": 0.39375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.90625,
+              "proceed_rate": 0.06875,
+              "defer_rate": 0.025,
+              "n_episodes": 160,
+              "avg_time_ms": 6374.946138262749,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.01875,
+              "hypothesis_hallucination_rate": 0.2375,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.38125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.925,
+              "proceed_rate": 0.075,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6254.765571653843,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.01875,
+              "hypothesis_hallucination_rate": 0.2375,
+              "contradiction_rate": 0.01875,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.91875,
+              "proceed_rate": 0.06875,
+              "defer_rate": 0.0125,
+              "n_episodes": 160,
+              "avg_time_ms": 6254.765571653843,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.2375,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.39375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.9375,
+              "proceed_rate": 0.0375,
+              "defer_rate": 0.025,
+              "n_episodes": 160,
+              "avg_time_ms": 6254.765571653843,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.2375,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.30625,
+              "false_escalation_rate": 0.4,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.93125,
+              "proceed_rate": 0.025,
+              "defer_rate": 0.04375,
+              "n_episodes": 160,
+              "avg_time_ms": 6254.765571653843,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.98125,
+              "f1": 0.9810422776148583,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.2375,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.39375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.925,
+              "proceed_rate": 0.025,
+              "defer_rate": 0.05,
+              "n_episodes": 160,
+              "avg_time_ms": 6254.765571653843,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.03125,
+              "hypothesis_hallucination_rate": 0.24375,
+              "contradiction_rate": 0.025,
+              "action_accuracy": 0.33125,
+              "false_escalation_rate": 0.38125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.9375,
+              "proceed_rate": 0.0625,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6258.536620438099,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.24375,
+              "contradiction_rate": 0.025,
+              "action_accuracy": 0.325,
+              "false_escalation_rate": 0.38125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.94375,
+              "proceed_rate": 0.05625,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6258.536620438099,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.025,
+              "hypothesis_hallucination_rate": 0.24375,
+              "contradiction_rate": 0.025,
+              "action_accuracy": 0.31875,
+              "false_escalation_rate": 0.38125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.95,
+              "proceed_rate": 0.05,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6258.536620438099,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.24375,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.96875,
+              "proceed_rate": 0.03125,
+              "defer_rate": 0.0,
+              "n_episodes": 160,
+              "avg_time_ms": 6258.536620438099,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.98125,
+              "f1": 0.9812144212523718,
+              "hallucination_rate": 0.0125,
+              "hypothesis_hallucination_rate": 0.24375,
+              "contradiction_rate": 0.0125,
+              "action_accuracy": 0.3125,
+              "false_escalation_rate": 0.3875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.96875,
+              "proceed_rate": 0.025,
+              "defer_rate": 0.00625,
+              "n_episodes": 160,
+              "avg_time_ms": 6258.536620438099,
+              "paired_shared_generations": true
+            }
+          }
+        }
+      ],
+      "summary": {
+        "shift_-0.10": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.024999999999999998,
+            "std": 0.005103103630798288,
+            "raw": [
+              0.025,
+              0.01875,
+              0.03125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.3333333333333333,
+            "std": 0.002946278254943964,
+            "raw": [
+              0.3375,
+              0.33125,
+              0.33125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3833333333333333,
+            "std": 0.002946278254943964,
+            "raw": [
+              0.3875,
+              0.38125,
+              0.38125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.07291666666666667,
+            "std": 0.007795119555779046,
+            "raw": [
+              0.08125,
+              0.075,
+              0.0625
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.0020833333333333333,
+            "std": 0.0029462782549439484,
+            "raw": [
+              0.00625,
+              0.0,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9249999999999999,
+            "std": 0.010206207261596585,
+            "raw": [
+              0.9125,
+              0.925,
+              0.9375
+            ]
+          }
+        },
+        "shift_-0.05": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.02291666666666667,
+            "std": 0.002946278254943949,
+            "raw": [
+              0.025,
+              0.01875,
+              0.025
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.32499999999999996,
+            "std": 0.005103103630798292,
+            "raw": [
+              0.33125,
+              0.31875,
+              0.325
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3875,
+            "std": 0.005103103630798292,
+            "raw": [
+              0.39375,
+              0.3875,
+              0.38125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.06666666666666667,
+            "std": 0.007795119555779044,
+            "raw": [
+              0.075,
+              0.06875,
+              0.05625
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.008333333333333333,
+            "std": 0.005892556509887897,
+            "raw": [
+              0.0125,
+              0.0125,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9249999999999999,
+            "std": 0.013501543121683045,
+            "raw": [
+              0.9125,
+              0.91875,
+              0.94375
+            ]
+          }
+        },
+        "shift_+0.00": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.020833333333333332,
+            "std": 0.005892556509887896,
+            "raw": [
+              0.025,
+              0.0125,
+              0.025
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.32083333333333336,
+            "std": 0.007795119555779042,
+            "raw": [
+              0.33125,
+              0.3125,
+              0.31875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3916666666666666,
+            "std": 0.007795119555779061,
+            "raw": [
+              0.4,
+              0.39375,
+              0.38125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.052083333333333336,
+            "std": 0.012842529172852038,
+            "raw": [
+              0.06875,
+              0.0375,
+              0.05
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.012500000000000002,
+            "std": 0.010206207261596576,
+            "raw": [
+              0.0125,
+              0.025,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9354166666666667,
+            "std": 0.012842529172852037,
+            "raw": [
+              0.91875,
+              0.9375,
+              0.95
+            ]
+          }
+        },
+        "shift_+0.05": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.016666666666666666,
+            "std": 0.005892556509887896,
+            "raw": [
+              0.025,
+              0.0125,
+              0.0125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.31666666666666665,
+            "std": 0.010622957319984958,
+            "raw": [
+              0.33125,
+              0.30625,
+              0.3125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3958333333333333,
+            "std": 0.005892556509887901,
+            "raw": [
+              0.4,
+              0.4,
+              0.3875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.041666666666666664,
+            "std": 0.01932003853228272,
+            "raw": [
+              0.06875,
+              0.025,
+              0.03125
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.020833333333333332,
+            "std": 0.01792151097300547,
+            "raw": [
+              0.01875,
+              0.04375,
+              0.0
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9375,
+            "std": 0.02338535866733714,
+            "raw": [
+              0.9125,
+              0.93125,
+              0.96875
+            ]
+          }
+        },
+        "shift_+0.10": {
+          "accuracy": {
+            "mean": 0.9854166666666666,
+            "std": 0.005892556509887928,
+            "raw": [
+              0.99375,
+              0.98125,
+              0.98125
+            ]
+          },
+          "f1": {
+            "mean": 0.9853335297951048,
+            "std": 0.005947438326762182,
+            "raw": [
+              0.9937438905180841,
+              0.9810422776148583,
+              0.9812144212523718
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.016666666666666666,
+            "std": 0.005892556509887896,
+            "raw": [
+              0.025,
+              0.0125,
+              0.0125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.32083333333333336,
+            "std": 0.011785113019775804,
+            "raw": [
+              0.3375,
+              0.3125,
+              0.3125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.39166666666666666,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.39375,
+              0.39375,
+              0.3875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.03958333333333333,
+            "std": 0.02062394778460764,
+            "raw": [
+              0.06875,
+              0.025,
+              0.025
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.027083333333333338,
+            "std": 0.017921510973005473,
+            "raw": [
+              0.025,
+              0.05,
+              0.00625
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.9333333333333332,
+            "std": 0.026187093937451108,
+            "raw": [
+              0.90625,
+              0.925,
+              0.96875
+            ]
+          }
+        }
+      },
+      "max_absolute_delta_from_unshifted": {
+        "accuracy": 0.0,
+        "f1": 0.0,
+        "hallucination_rate": 0.004166666666666666,
+        "action_accuracy": 0.012499999999999956,
+        "false_escalation_rate": 0.008333333333333304,
+        "proceed_rate": 0.020833333333333336,
+        "defer_rate": 0.014583333333333335,
+        "escalation_rate": 0.01041666666666674
+      }
+    },
+    "care": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.5875,
+              "f1": 0.5869191049913942,
+              "hallucination_rate": 0.09375,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.0625,
+              "action_accuracy": 0.1,
+              "false_escalation_rate": 0.33125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.525,
+              "proceed_rate": 0.175,
+              "defer_rate": 0.3,
+              "n_episodes": 160,
+              "avg_time_ms": 6397.215166687965,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.5875,
+              "f1": 0.5869191049913942,
+              "hallucination_rate": 0.08125,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.05,
+              "action_accuracy": 0.1,
+              "false_escalation_rate": 0.33125,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5375,
+              "proceed_rate": 0.1625,
+              "defer_rate": 0.3,
+              "n_episodes": 160,
+              "avg_time_ms": 6397.215166687965,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.5875,
+              "f1": 0.5869191049913942,
+              "hallucination_rate": 0.0625,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.04375,
+              "action_accuracy": 0.09375,
+              "false_escalation_rate": 0.34375,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.56875,
+              "proceed_rate": 0.13125,
+              "defer_rate": 0.3,
+              "n_episodes": 160,
+              "avg_time_ms": 6397.215166687965,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.5875,
+              "f1": 0.5869191049913942,
+              "hallucination_rate": 0.08125,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.05625,
+              "action_accuracy": 0.1,
+              "false_escalation_rate": 0.3375,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5375,
+              "proceed_rate": 0.1625,
+              "defer_rate": 0.3,
+              "n_episodes": 160,
+              "avg_time_ms": 6397.215166687965,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.5875,
+              "f1": 0.5869191049913942,
+              "hallucination_rate": 0.0875,
+              "hypothesis_hallucination_rate": 0.53125,
+              "contradiction_rate": 0.05625,
+              "action_accuracy": 0.10625,
+              "false_escalation_rate": 0.3375,
+              "overconfident_error_rate": 0.00625,
+              "escalation_rate": 0.5375,
+              "proceed_rate": 0.1625,
+              "defer_rate": 0.3,
+              "n_episodes": 160,
+              "avg_time_ms": 6397.215166687965,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 1,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.58125,
+              "f1": 0.5804469492387774,
+              "hallucination_rate": 0.1,
+              "hypothesis_hallucination_rate": 0.5,
+              "contradiction_rate": 0.0625,
+              "action_accuracy": 0.1125,
+              "false_escalation_rate": 0.33125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.6,
+              "proceed_rate": 0.16875,
+              "defer_rate": 0.23125,
+              "n_episodes": 160,
+              "avg_time_ms": 6320.024694502354,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.58125,
+              "f1": 0.5804469492387774,
+              "hallucination_rate": 0.09375,
+              "hypothesis_hallucination_rate": 0.5,
+              "contradiction_rate": 0.0625,
+              "action_accuracy": 0.1,
+              "false_escalation_rate": 0.35625,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.6375,
+              "proceed_rate": 0.13125,
+              "defer_rate": 0.23125,
+              "n_episodes": 160,
+              "avg_time_ms": 6320.024694502354,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.58125,
+              "f1": 0.5804469492387774,
+              "hallucination_rate": 0.08125,
+              "hypothesis_hallucination_rate": 0.5,
+              "contradiction_rate": 0.05,
+              "action_accuracy": 0.10625,
+              "false_escalation_rate": 0.34375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.63125,
+              "proceed_rate": 0.1375,
+              "defer_rate": 0.23125,
+              "n_episodes": 160,
+              "avg_time_ms": 6320.024694502354,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.5875,
+              "f1": 0.5864661654135338,
+              "hallucination_rate": 0.09375,
+              "hypothesis_hallucination_rate": 0.5,
+              "contradiction_rate": 0.05625,
+              "action_accuracy": 0.1125,
+              "false_escalation_rate": 0.3375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.60625,
+              "proceed_rate": 0.1625,
+              "defer_rate": 0.23125,
+              "n_episodes": 160,
+              "avg_time_ms": 6320.024694502354,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.58125,
+              "f1": 0.5804469492387774,
+              "hallucination_rate": 0.0875,
+              "hypothesis_hallucination_rate": 0.5,
+              "contradiction_rate": 0.0625,
+              "action_accuracy": 0.10625,
+              "false_escalation_rate": 0.34375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.61875,
+              "proceed_rate": 0.15,
+              "defer_rate": 0.23125,
+              "n_episodes": 160,
+              "avg_time_ms": 6320.024694502354,
+              "paired_shared_generations": true
+            }
+          }
+        },
+        {
+          "seed": 2,
+          "metrics": {
+            "shift_-0.10": {
+              "accuracy": 0.58125,
+              "f1": 0.5792613524863612,
+              "hallucination_rate": 0.1375,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.10625,
+              "action_accuracy": 0.19375,
+              "false_escalation_rate": 0.275,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.45625,
+              "proceed_rate": 0.2,
+              "defer_rate": 0.34375,
+              "n_episodes": 160,
+              "avg_time_ms": 4976.160694658756,
+              "paired_shared_generations": true
+            },
+            "shift_-0.05": {
+              "accuracy": 0.5875,
+              "f1": 0.5858823529411765,
+              "hallucination_rate": 0.11875,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.0875,
+              "action_accuracy": 0.1875,
+              "false_escalation_rate": 0.29375,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.475,
+              "proceed_rate": 0.18125,
+              "defer_rate": 0.34375,
+              "n_episodes": 160,
+              "avg_time_ms": 4976.160694658756,
+              "paired_shared_generations": true
+            },
+            "shift_+0.00": {
+              "accuracy": 0.5875,
+              "f1": 0.5858823529411765,
+              "hallucination_rate": 0.11875,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.0875,
+              "action_accuracy": 0.18125,
+              "false_escalation_rate": 0.3125,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.50625,
+              "proceed_rate": 0.15,
+              "defer_rate": 0.34375,
+              "n_episodes": 160,
+              "avg_time_ms": 4976.160694658756,
+              "paired_shared_generations": true
+            },
+            "shift_+0.05": {
+              "accuracy": 0.5875,
+              "f1": 0.5858823529411765,
+              "hallucination_rate": 0.125,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.09375,
+              "action_accuracy": 0.19375,
+              "false_escalation_rate": 0.2875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.46875,
+              "proceed_rate": 0.1875,
+              "defer_rate": 0.34375,
+              "n_episodes": 160,
+              "avg_time_ms": 4976.160694658756,
+              "paired_shared_generations": true
+            },
+            "shift_+0.10": {
+              "accuracy": 0.58125,
+              "f1": 0.5799208432932325,
+              "hallucination_rate": 0.1,
+              "hypothesis_hallucination_rate": 0.5375,
+              "contradiction_rate": 0.08125,
+              "action_accuracy": 0.19375,
+              "false_escalation_rate": 0.2875,
+              "overconfident_error_rate": 0.0,
+              "escalation_rate": 0.4875,
+              "proceed_rate": 0.1625,
+              "defer_rate": 0.35,
+              "n_episodes": 160,
+              "avg_time_ms": 4976.160694658756,
+              "paired_shared_generations": true
+            }
+          }
+        }
+      ],
+      "summary": {
+        "shift_-0.10": {
+          "accuracy": {
+            "mean": 0.5833333333333334,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.5875,
+              0.58125,
+              0.58125
+            ]
+          },
+          "f1": {
+            "mean": 0.5822091355721776,
+            "std": 0.0033654389374247183,
+            "raw": [
+              0.5869191049913942,
+              0.5804469492387774,
+              0.5792613524863612
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.11041666666666668,
+            "std": 0.019320038532282723,
+            "raw": [
+              0.09375,
+              0.1,
+              0.1375
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.13541666666666666,
+            "std": 0.04156236946512501,
+            "raw": [
+              0.1,
+              0.1125,
+              0.19375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3125,
+            "std": 0.026516504294495518,
+            "raw": [
+              0.33125,
+              0.33125,
+              0.275
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.18125,
+            "std": 0.013501543121683045,
+            "raw": [
+              0.175,
+              0.16875,
+              0.2
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.2916666666666667,
+            "std": 0.046304397439360136,
+            "raw": [
+              0.3,
+              0.23125,
+              0.34375
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5270833333333333,
+            "std": 0.05870417834835571,
+            "raw": [
+              0.525,
+              0.6,
+              0.45625
+            ]
+          }
+        },
+        "shift_-0.05": {
+          "accuracy": {
+            "mean": 0.5854166666666667,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.5875,
+              0.58125,
+              0.5875
+            ]
+          },
+          "f1": {
+            "mean": 0.5844161357237827,
+            "std": 0.0028383733273325594,
+            "raw": [
+              0.5869191049913942,
+              0.5804469492387774,
+              0.5858823529411765
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.09791666666666665,
+            "std": 0.015590239111558086,
+            "raw": [
+              0.08125,
+              0.09375,
+              0.11875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.12916666666666668,
+            "std": 0.04124789556921527,
+            "raw": [
+              0.1,
+              0.1,
+              0.1875
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.32708333333333334,
+            "std": 0.025685058345704066,
+            "raw": [
+              0.33125,
+              0.35625,
+              0.29375
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.15833333333333333,
+            "std": 0.020623947784607632,
+            "raw": [
+              0.1625,
+              0.13125,
+              0.18125
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.2916666666666667,
+            "std": 0.046304397439360136,
+            "raw": [
+              0.3,
+              0.23125,
+              0.34375
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5499999999999999,
+            "std": 0.06692657668420421,
+            "raw": [
+              0.5375,
+              0.6375,
+              0.475
+            ]
+          }
+        },
+        "shift_+0.00": {
+          "accuracy": {
+            "mean": 0.5854166666666667,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.5875,
+              0.58125,
+              0.5875
+            ]
+          },
+          "f1": {
+            "mean": 0.5844161357237827,
+            "std": 0.0028383733273325594,
+            "raw": [
+              0.5869191049913942,
+              0.5804469492387774,
+              0.5858823529411765
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.08749999999999998,
+            "std": 0.023385358667337132,
+            "raw": [
+              0.0625,
+              0.08125,
+              0.11875
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.12708333333333333,
+            "std": 0.03864007706456543,
+            "raw": [
+              0.09375,
+              0.10625,
+              0.18125
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3333333333333333,
+            "std": 0.01473139127471974,
+            "raw": [
+              0.34375,
+              0.34375,
+              0.3125
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.13958333333333336,
+            "std": 0.00779511955577904,
+            "raw": [
+              0.13125,
+              0.1375,
+              0.15
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.2916666666666667,
+            "std": 0.046304397439360136,
+            "raw": [
+              0.3,
+              0.23125,
+              0.34375
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.56875,
+            "std": 0.05103103630798288,
+            "raw": [
+              0.56875,
+              0.63125,
+              0.50625
+            ]
+          }
+        },
+        "shift_+0.05": {
+          "accuracy": {
+            "mean": 0.5875,
+            "std": 0.0,
+            "raw": [
+              0.5875,
+              0.5875,
+              0.5875
+            ]
+          },
+          "f1": {
+            "mean": 0.5864225411153682,
+            "std": 0.0004243748444873391,
+            "raw": [
+              0.5869191049913942,
+              0.5864661654135338,
+              0.5858823529411765
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.09999999999999999,
+            "std": 0.018399501804849682,
+            "raw": [
+              0.08125,
+              0.09375,
+              0.125
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.13541666666666666,
+            "std": 0.04156236946512501,
+            "raw": [
+              0.1,
+              0.1125,
+              0.19375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.32083333333333336,
+            "std": 0.023570226039551605,
+            "raw": [
+              0.3375,
+              0.3375,
+              0.2875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.1708333333333333,
+            "std": 0.01178511301977579,
+            "raw": [
+              0.1625,
+              0.1625,
+              0.1875
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.2916666666666667,
+            "std": 0.046304397439360136,
+            "raw": [
+              0.3,
+              0.23125,
+              0.34375
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5375,
+            "std": 0.05613413993878115,
+            "raw": [
+              0.5375,
+              0.60625,
+              0.46875
+            ]
+          }
+        },
+        "shift_+0.10": {
+          "accuracy": {
+            "mean": 0.5833333333333334,
+            "std": 0.0029462782549439376,
+            "raw": [
+              0.5875,
+              0.58125,
+              0.58125
+            ]
+          },
+          "f1": {
+            "mean": 0.5824289658411347,
+            "std": 0.003182264294283183,
+            "raw": [
+              0.5869191049913942,
+              0.5804469492387774,
+              0.5799208432932325
+            ]
+          },
+          "hallucination_rate": {
+            "mean": 0.09166666666666667,
+            "std": 0.005892556509887901,
+            "raw": [
+              0.0875,
+              0.0875,
+              0.1
+            ]
+          },
+          "action_accuracy": {
+            "mean": 0.13541666666666666,
+            "std": 0.04124789556921528,
+            "raw": [
+              0.10625,
+              0.10625,
+              0.19375
+            ]
+          },
+          "false_escalation_rate": {
+            "mean": 0.3229166666666667,
+            "std": 0.025173012444988707,
+            "raw": [
+              0.3375,
+              0.34375,
+              0.2875
+            ]
+          },
+          "proceed_rate": {
+            "mean": 0.15833333333333333,
+            "std": 0.005892556509887902,
+            "raw": [
+              0.1625,
+              0.15,
+              0.1625
+            ]
+          },
+          "defer_rate": {
+            "mean": 0.29375,
+            "std": 0.048680506023116334,
+            "raw": [
+              0.3,
+              0.23125,
+              0.35
+            ]
+          },
+          "escalation_rate": {
+            "mean": 0.5479166666666667,
+            "std": 0.054086479107279886,
+            "raw": [
+              0.5375,
+              0.61875,
+              0.4875
+            ]
+          }
+        }
+      },
+      "max_absolute_delta_from_unshifted": {
+        "accuracy": 0.002083333333333326,
+        "f1": 0.002207000151605132,
+        "hallucination_rate": 0.022916666666666696,
+        "action_accuracy": 0.008333333333333331,
+        "false_escalation_rate": 0.020833333333333315,
+        "proceed_rate": 0.04166666666666663,
+        "defer_rate": 0.002083333333333326,
+        "escalation_rate": 0.04166666666666663
+      }
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "experiment": "multi_backbone_evaluation",
+    "backbone": "mistral7b",
+    "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "timestamp": "2026-07-24T00:07:34"
+  },
+  "results": {
+    "PQ_Classification": {
+      "summary": {
+        "accuracy": {
+          "mean": 0.9333333333333332,
+          "std": 0.017921510973005497
+        },
+        "action_accuracy": {
+          "mean": 0.33125000000000004,
+          "std": 0.005103103630798292
+        },
+        "avg_time_ms": {
+          "mean": 8277.842597166697,
+          "std": 135.13855717614328
+        },
+        "contradiction_rate": {
+          "mean": 0.07083333333333333,
+          "std": 0.005892556509887895
+        },
+        "defer_rate": {
+          "mean": 0.06875,
+          "std": 0.010206207261596576
+        },
+        "escalation_rate": {
+          "mean": 0.5520833333333333,
+          "std": 0.01640418307085793
+        },
+        "f1": {
+          "mean": 0.9307226003772057,
+          "std": 0.019100400034652177
+        },
+        "false_escalation_rate": {
+          "mean": 0.09375,
+          "std": 0.013501543121683042
+        },
+        "hallucination_rate": {
+          "mean": 0.08541666666666665,
+          "std": 0.007795119555779046
+        },
+        "hypothesis_hallucination_rate": {
+          "mean": 0.19166666666666665,
+          "std": 0.025685058345704066
+        },
+        "n_episodes": {
+          "mean": 160.0,
+          "std": 0.0
+        },
+        "overconfident_error_rate": {
+          "mean": 0.012500000000000002,
+          "std": 0.005103103630798287
+        },
+        "proceed_rate": {
+          "mean": 0.37916666666666665,
+          "std": 0.007795119555779037
+        },
+        "seed": {
+          "mean": 1.0,
+          "std": 0.816496580927726
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 0,
+          "accuracy": 0.93125,
+          "f1": 0.9259920634920635,
+          "hallucination_rate": 0.09375,
+          "hypothesis_hallucination_rate": 0.225,
+          "contradiction_rate": 0.075,
+          "action_accuracy": 0.325,
+          "false_escalation_rate": 0.1125,
+          "overconfident_error_rate": 0.00625,
+          "escalation_rate": 0.575,
+          "proceed_rate": 0.36875,
+          "defer_rate": 0.05625,
+          "n_episodes": 160,
+          "avg_time_ms": 8102.131821215153
+        },
+        {
+          "seed": 1,
+          "accuracy": 0.9125,
+          "f1": 0.9100562723095618,
+          "hallucination_rate": 0.0875,
+          "hypothesis_hallucination_rate": 0.1625,
+          "contradiction_rate": 0.075,
+          "action_accuracy": 0.3375,
+          "false_escalation_rate": 0.0875,
+          "overconfident_error_rate": 0.01875,
+          "escalation_rate": 0.5375,
+          "proceed_rate": 0.38125,
+          "defer_rate": 0.08125,
+          "n_episodes": 160,
+          "avg_time_ms": 8300.598546862602
+        },
+        {
+          "seed": 2,
+          "accuracy": 0.95625,
+          "f1": 0.9561194653299916,
+          "hallucination_rate": 0.075,
+          "hypothesis_hallucination_rate": 0.1875,
+          "contradiction_rate": 0.0625,
+          "action_accuracy": 0.33125,
+          "false_escalation_rate": 0.08125,
+          "overconfident_error_rate": 0.0125,
+          "escalation_rate": 0.54375,
+          "proceed_rate": 0.3875,
+          "defer_rate": 0.06875,
+          "n_episodes": 160,
+          "avg_time_ms": 8430.797423422337
+        }
+      ],
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3"
+    },
+    "CWRU": {
+      "summary": {
+        "accuracy": {
+          "mean": 0.9854166666666666,
+          "std": 0.005892556509887928
+        },
+        "action_accuracy": {
+          "mean": 0.32916666666666666,
+          "std": 0.020623947784607632
+        },
+        "avg_time_ms": {
+          "mean": 6748.63132884105,
+          "std": 80.37832297200117
+        },
+        "contradiction_rate": {
+          "mean": 0.012499999999999999,
+          "std": 0.008838834764831844
+        },
+        "defer_rate": {
+          "mean": 0.029166666666666664,
+          "std": 0.017921510973005473
+        },
+        "escalation_rate": {
+          "mean": 0.94375,
+          "std": 0.03572172541558799
+        },
+        "f1": {
+          "mean": 0.9853335297951048,
+          "std": 0.005947438326762182
+        },
+        "false_escalation_rate": {
+          "mean": 0.3729166666666666,
+          "std": 0.023011168785806804
+        },
+        "hallucination_rate": {
+          "mean": 0.012499999999999999,
+          "std": 0.008838834764831844
+        },
+        "hypothesis_hallucination_rate": {
+          "mean": 0.3333333333333333,
+          "std": 0.05597928684393502
+        },
+        "n_episodes": {
+          "mean": 160.0,
+          "std": 0.0
+        },
+        "overconfident_error_rate": {
+          "mean": 0.0020833333333333333,
+          "std": 0.0029462782549439484
+        },
+        "proceed_rate": {
+          "mean": 0.027083333333333334,
+          "std": 0.02124591463996994
+        },
+        "seed": {
+          "mean": 1.0,
+          "std": 0.816496580927726
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 0,
+          "accuracy": 0.99375,
+          "f1": 0.9937438905180841,
+          "hallucination_rate": 0.0,
+          "hypothesis_hallucination_rate": 0.25625,
+          "contradiction_rate": 0.0,
+          "action_accuracy": 0.325,
+          "false_escalation_rate": 0.375,
+          "overconfident_error_rate": 0.0,
+          "escalation_rate": 0.9625,
+          "proceed_rate": 0.00625,
+          "defer_rate": 0.03125,
+          "n_episodes": 160,
+          "avg_time_ms": 6667.744781076908
+        },
+        {
+          "seed": 1,
+          "accuracy": 0.98125,
+          "f1": 0.9810422776148583,
+          "hallucination_rate": 0.01875,
+          "hypothesis_hallucination_rate": 0.3875,
+          "contradiction_rate": 0.01875,
+          "action_accuracy": 0.30625,
+          "false_escalation_rate": 0.4,
+          "overconfident_error_rate": 0.00625,
+          "escalation_rate": 0.975,
+          "proceed_rate": 0.01875,
+          "defer_rate": 0.00625,
+          "n_episodes": 160,
+          "avg_time_ms": 6719.907869398594
+        },
+        {
+          "seed": 2,
+          "accuracy": 0.98125,
+          "f1": 0.9812144212523718,
+          "hallucination_rate": 0.01875,
+          "hypothesis_hallucination_rate": 0.35625,
+          "contradiction_rate": 0.01875,
+          "action_accuracy": 0.35625,
+          "false_escalation_rate": 0.34375,
+          "overconfident_error_rate": 0.0,
+          "escalation_rate": 0.89375,
+          "proceed_rate": 0.05625,
+          "defer_rate": 0.05,
+          "n_episodes": 160,
+          "avg_time_ms": 6858.241336047649
+        }
+      ],
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3"
+    },
+    "CARE_Wind": {
+      "summary": {
+        "accuracy": {
+          "mean": 0.5895833333333333,
+          "std": 0.010622957319984982
+        },
+        "action_accuracy": {
+          "mean": 0.24583333333333335,
+          "std": 0.04279716371702946
+        },
+        "avg_time_ms": {
+          "mean": 6542.471607029438,
+          "std": 53.53484582597504
+        },
+        "contradiction_rate": {
+          "mean": 0.027083333333333334,
+          "std": 0.02062394778460764
+        },
+        "defer_rate": {
+          "mean": 0.38125000000000003,
+          "std": 0.07722397080354432
+        },
+        "escalation_rate": {
+          "mean": 0.4041666666666666,
+          "std": 0.0629842352409624
+        },
+        "f1": {
+          "mean": 0.5882510153085921,
+          "std": 0.010538540598754746
+        },
+        "false_escalation_rate": {
+          "mean": 0.23125000000000004,
+          "std": 0.04050462936504912
+        },
+        "hallucination_rate": {
+          "mean": 0.027083333333333334,
+          "std": 0.02062394778460764
+        },
+        "hypothesis_hallucination_rate": {
+          "mean": 0.06666666666666667,
+          "std": 0.01178511301977579
+        },
+        "n_episodes": {
+          "mean": 160.0,
+          "std": 0.0
+        },
+        "overconfident_error_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "proceed_rate": {
+          "mean": 0.21458333333333332,
+          "std": 0.03864007706456543
+        },
+        "seed": {
+          "mean": 1.0,
+          "std": 0.816496580927726
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 0,
+          "accuracy": 0.6,
+          "f1": 0.5989974937343359,
+          "hallucination_rate": 0.0125,
+          "hypothesis_hallucination_rate": 0.05,
+          "contradiction_rate": 0.0125,
+          "action_accuracy": 0.21875,
+          "false_escalation_rate": 0.26875,
+          "overconfident_error_rate": 0.0,
+          "escalation_rate": 0.46875,
+          "proceed_rate": 0.18125,
+          "defer_rate": 0.35,
+          "n_episodes": 160,
+          "avg_time_ms": 6549.412456154823
+        },
+        {
+          "seed": 1,
+          "accuracy": 0.59375,
+          "f1": 0.5918207150987087,
+          "hallucination_rate": 0.05625,
+          "hypothesis_hallucination_rate": 0.075,
+          "contradiction_rate": 0.05625,
+          "action_accuracy": 0.2125,
+          "false_escalation_rate": 0.25,
+          "overconfident_error_rate": 0.0,
+          "escalation_rate": 0.425,
+          "proceed_rate": 0.26875,
+          "defer_rate": 0.30625,
+          "n_episodes": 160,
+          "avg_time_ms": 6604.291595518589
+        },
+        {
+          "seed": 2,
+          "accuracy": 0.575,
+          "f1": 0.5739348370927319,
+          "hallucination_rate": 0.0125,
+          "hypothesis_hallucination_rate": 0.075,
+          "contradiction_rate": 0.0125,
+          "action_accuracy": 0.30625,
+          "false_escalation_rate": 0.175,
+          "overconfident_error_rate": 0.0,
+          "escalation_rate": 0.31875,
+          "proceed_rate": 0.19375,
+          "defer_rate": 0.4875,
+          "n_episodes": 160,
+          "avg_time_ms": 6473.710769414902
+        }
+      ],
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3"
+    }
+  }
+}

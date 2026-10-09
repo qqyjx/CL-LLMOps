@@ -1,0 +1,140 @@
+{
+  "provenance": "results/independent_judge.json audit_rows (3 decode seeds x 160 episodes per dataset, gate decisions and both judges' verdicts from the same run)",
+  "paper_section": "sec:reliability",
+  "definition": "released-hallucination rate = fraction of all episodes in which a judge-flagged hypothesis is gated to proceed; Agent-noV proceeds on all episodes by construction",
+  "n_episodes_per_dataset": 480,
+  "values": {
+    "pq16": {
+      "rule": {
+        "agent_nov": {
+          "mean": 0.4042,
+          "std": 0.026,
+          "per_seed": [
+            0.425,
+            0.375,
+            0.4125
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.175,
+          "std": 0.0451,
+          "per_seed": [
+            0.2125,
+            0.125,
+            0.1875
+          ]
+        },
+        "reduction_pp": 22.92
+      },
+      "nli": {
+        "agent_nov": {
+          "mean": 0.3292,
+          "std": 0.0416,
+          "per_seed": [
+            0.375,
+            0.3187,
+            0.2938
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.1146,
+          "std": 0.0295,
+          "per_seed": [
+            0.125,
+            0.0813,
+            0.1375
+          ]
+        },
+        "reduction_pp": 21.46
+      }
+    },
+    "cwru": {
+      "rule": {
+        "agent_nov": {
+          "mean": 0.2188,
+          "std": 0.025,
+          "per_seed": [
+            0.2437,
+            0.2188,
+            0.1938
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.0125,
+          "std": 0.0062,
+          "per_seed": [
+            0.0187,
+            0.0063,
+            0.0125
+          ]
+        },
+        "reduction_pp": 20.63
+      },
+      "nli": {
+        "agent_nov": {
+          "mean": 0.6292,
+          "std": 0.0237,
+          "per_seed": [
+            0.6562,
+            0.6188,
+            0.6125
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.0208,
+          "std": 0.0219,
+          "per_seed": [
+            0.0437,
+            0.0187,
+            0.0
+          ]
+        },
+        "reduction_pp": 60.84
+      }
+    },
+    "care": {
+      "rule": {
+        "agent_nov": {
+          "mean": 0.4917,
+          "std": 0.0402,
+          "per_seed": [
+            0.4625,
+            0.475,
+            0.5375
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.1,
+          "std": 0.0165,
+          "per_seed": [
+            0.0875,
+            0.1187,
+            0.0938
+          ]
+        },
+        "reduction_pp": 39.17
+      },
+      "nli": {
+        "agent_nov": {
+          "mean": 0.65,
+          "std": 0.0845,
+          "per_seed": [
+            0.5625,
+            0.6562,
+            0.7312
+          ]
+        },
+        "cl_llmops": {
+          "mean": 0.0854,
+          "std": 0.013,
+          "per_seed": [
+            0.0813,
+            0.1,
+            0.075
+          ]
+        },
+        "reduction_pp": 56.46
+      }
+    }
+  }
+}

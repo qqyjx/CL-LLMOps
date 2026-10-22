@@ -76,3 +76,23 @@ The tables in the article are computed from the per-experiment files above at fu
 ## License and citation
 
 The code is released under the MIT License (`LICENSE`). Please cite the article above; `CITATION.cff` gives the reference in machine-readable form.
+
+## Citation
+
+If you use this code, please cite the paper:
+
+```bibtex
+@article{xiao2027fuzzy,
+  title = {Fuzzy-gated verification of LLM agents for industrial fault diagnosis: An evolutionary-optimized closed-loop framework},
+  volume = {204},
+  ISSN = {1568-4946},
+  url = {http://dx.doi.org/10.1016/j.asoc.2026.116560},
+  DOI = {10.1016/j.asoc.2026.116560},
+  journal = {Applied Soft Computing},
+  publisher = {Elsevier BV},
+  author = {Xiao, Yifan and Xu, Dexuan and Li, Shijie and Ding, Weiping and Huang, Yu},
+  year = {2027},
+  month = Jan,
+  pages = {116560},
+}
+```

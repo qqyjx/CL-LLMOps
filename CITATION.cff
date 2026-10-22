@@ -30,5 +30,10 @@ preferred-citation:
     - family-names: Huang
       given-names: Yu
   journal: "Applied Soft Computing"
-  year: 2026
+  publisher:
+    name: "Elsevier BV"
+  volume: 204
+  notes: "Article number 116560"
+  year: 2027
+  month: 1
   doi: "10.1016/j.asoc.2026.116560"

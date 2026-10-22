@@ -2,7 +2,7 @@
 
 Code and result files for the article
 
-> Y. Xiao, D. Xu, S. Li, W. Ding, Y. Huang. **Fuzzy-gated verification of LLM agents for industrial fault diagnosis: An evolutionary-optimized closed-loop framework.** *Applied Soft Computing*, 2026. https://doi.org/10.1016/j.asoc.2026.116560
+> Y. Xiao, D. Xu, S. Li, W. Ding, Y. Huang. **Fuzzy-gated verification of LLM agents for industrial fault diagnosis: An evolutionary-optimized closed-loop framework.** *Applied Soft Computing*, 204, 116560, 2027. https://doi.org/10.1016/j.asoc.2026.116560
 
 CL-LLMOps routes an LLM diagnostic agent through five stages (alarm normalization, hypothesis generation, verification, action planning, regression testing). The verification layer combines rule checks, a cross-attention evidence verifier (CAEVN) and a Mamdani fuzzy gate that decides to proceed, escalate, or defer. MOPSO tunes the gate parameters.
 
